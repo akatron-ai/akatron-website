@@ -96,4 +96,42 @@ header {
     text-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
     letter-spacing: 2px;
 }
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(180deg, #020617, #020617cc);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+
+/* Logo styling */
+.logo img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 12px rgba(212,175,55,0.35);
+}
+
+/* Navigation */
+nav a {
+  color: #e5e7eb;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 
