@@ -134,4 +134,42 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+/* ===== HERO SECTION ===== */
+.hero {
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.12), transparent 55%),
+    linear-gradient(180deg, #020617, #020617);
+  padding: 140px 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: #d4af37;
+  text-shadow: 0 0 20px rgba(212,175,55,0.25);
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 20px auto;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* CTA Button */
+.hero .btn {
+  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  color: #020617;
+  font-weight: 600;
+  padding: 14px 34px;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(212,175,55,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(212,175,55,0.5);
+}
 
