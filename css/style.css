@@ -172,4 +172,44 @@ nav a:hover::after {
   transform: translateY(-2px);
   box-shadow: 0 14px 40px rgba(212,175,55,0.5);
 }
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #d4af37;
+}
+
+.service-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #0b1220, #020617);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card h3 {
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+}
 
