@@ -86,9 +86,10 @@ header {
 }
 .hero-title {
     font-size: 3.5rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #ffffff, #00bfff);
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #ffd700, #00bfff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
