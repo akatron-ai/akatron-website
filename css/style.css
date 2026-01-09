@@ -82,3 +82,11 @@ header {
     border: 2px solid rgba(0, 191, 255, 0.6);
     box-shadow: 0 0 12px rgba(0, 191, 255, 0.4);
 }
+.hero-title {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffffff, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
