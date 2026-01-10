@@ -335,4 +335,16 @@ nav a:hover::after {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(0, 191, 255, 0.25);
 }
+/* FORCE GOLD COLOR FOR SERVICES SECTION */
+#services h2 {
+  color: #d4af37 !important;
+}
+
+#services h3 {
+  color: #d4af37 !important;
+}
+
+#services .section-subtitle {
+  color: #c9b37e !important;
+}
 
