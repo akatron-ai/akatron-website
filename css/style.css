@@ -375,4 +375,10 @@ nav a:hover::after {
   box-shadow: 0 0 45px rgba(212, 175, 55, 0.75) !important;
   transform: translateY(-8px) !important;
 }
+/* FORCE WHITE TEXT IN ALL SERVICE & WHY AKATRON BOXES */
+.service-card p,
+.why-card p,
+.section p {
+    color: #ffffff !important;
+}
 
