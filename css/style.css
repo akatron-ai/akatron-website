@@ -354,4 +354,19 @@ nav a:hover::after {
 .service-card:hover i {
   filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
 }
+/* FORCE GOLD SERVICE CARDS — FINAL OVERRIDE */
+.service-card,
+.service-card * {
+  color: #d4af37 !important;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #0b1220, #020617) !important;
+  border: 1px solid rgba(212, 175, 55, 0.6) !important;
+}
+
+.service-card:hover {
+  box-shadow: 0 0 45px rgba(212, 175, 55, 0.75) !important;
+  transform: translateY(-8px) !important;
+}
 
