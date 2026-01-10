@@ -92,9 +92,11 @@ header {
     -webkit-text-fill-color: transparent;
 }
 .gold-text {
-    color: #d4af37;
-    text-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
-    letter-spacing: 2px;
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 }
 /* ===== HEADER ===== */
 header {
