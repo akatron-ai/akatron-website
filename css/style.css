@@ -204,6 +204,12 @@ nav a:hover::after {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
 }
+.service-card:hover h3 {
+  color: #d4af37; /* GOLD */
+}
+.service-card:hover p {
+  color: #f5e6b3;
+}
 
 .service-card p {
   color: #cbd5e1;
