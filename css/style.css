@@ -257,4 +257,29 @@ nav a:hover::after {
   margin: 0 auto;
   line-height: 1.6;
 }
+/* ===== Service Cards Premium Effect ===== */
+
+.service-card {
+  background: linear-gradient(145deg, #0b1220, #05080f);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
 
