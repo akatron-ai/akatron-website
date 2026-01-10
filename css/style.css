@@ -201,7 +201,8 @@ nav a:hover::after {
 .service-card h3 {
   color: #d4af37;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
 }
 
 .service-card p {
@@ -212,8 +213,10 @@ nav a:hover::after {
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.45);
+  border-color: rgba(212, 175, 55, 0.8);
 }
+
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -346,5 +349,9 @@ nav a:hover::after {
 
 #services .section-subtitle {
   color: #c9b37e !important;
+}
+.service-card:hover img,
+.service-card:hover i {
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
 }
 
