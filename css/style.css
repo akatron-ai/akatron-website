@@ -414,4 +414,31 @@ nav a:hover::after {
 .contact-email strong {
   color: #ffd700;
 }
+/* Section main headings */
+section h2 {
+  font-size: 32px;      /* was too big */
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Sub headings */
+section h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Paragraph text */
+section p {
+  font-size: 16px;      /* professional reading size */
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+/* Bullet points */
+section ul li {
+  font-size: 16px;
+  line-height: 1.6;
+}
 
