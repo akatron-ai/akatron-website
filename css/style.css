@@ -1,5 +1,5 @@
 /* AKATRON - Ultra Premium Cybersecurity Website */
-/* Professional Design by Elite Standards */
+/* Professional Design with Solid Logo Blue Background */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
@@ -36,8 +36,7 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-dark) 100%);
-    background-attachment: fixed;
+    background: #0d1e31; /* SOLID LOGO BLUE */
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -52,7 +51,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(13, 30, 49, 0.85);
+    background: rgba(13, 30, 49, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 215, 0, 0.1);
@@ -66,6 +65,7 @@ body {
 .navbar.scrolled {
     padding: 15px 5%;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(13, 30, 49, 0.98);
 }
 
 .logo {
@@ -148,6 +148,7 @@ nav a.active {
     padding: 150px 5% 100px;
     position: relative;
     overflow: hidden;
+    background: #0d1e31; /* SOLID LOGO BLUE */
 }
 
 .hero::before {
@@ -158,7 +159,7 @@ nav a.active {
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
     pointer-events: none;
     animation: pulse 4s ease-in-out infinite;
 }
@@ -247,10 +248,11 @@ nav a.active {
 .section {
     padding: 120px 5%;
     position: relative;
+    background: #0d1e31; /* SOLID LOGO BLUE */
 }
 
 .section:nth-child(even) {
-    background: linear-gradient(135deg, rgba(26, 58, 92, 0.3) 0%, transparent 100%);
+    background: #0d1e31; /* SOLID LOGO BLUE - NO GRADIENT */
 }
 
 .container {
@@ -297,7 +299,7 @@ nav a.active {
 }
 
 .service-card {
-    background: rgba(13, 30, 49, 0.6);
+    background: rgba(26, 58, 92, 0.3);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 215, 0, 0.2);
@@ -328,6 +330,7 @@ nav a.active {
     transform: translateY(-10px);
     border-color: var(--accent);
     box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+    background: rgba(26, 58, 92, 0.5);
 }
 
 .service-icon {
@@ -376,7 +379,7 @@ nav a.active {
 }
 
 .price-card {
-    background: rgba(13, 30, 49, 0.6);
+    background: rgba(26, 58, 92, 0.3);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 215, 0, 0.2);
@@ -390,6 +393,7 @@ nav a.active {
     transform: translateY(-10px);
     border-color: var(--accent);
     box-shadow: 0 25px 60px rgba(255, 215, 0, 0.3);
+    background: rgba(26, 58, 92, 0.5);
 }
 
 .price-card.featured {
@@ -409,7 +413,7 @@ nav a.active {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(13, 30, 49, 0.6);
+    background: rgba(26, 58, 92, 0.3);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 50px;
@@ -424,7 +428,7 @@ nav a.active {
     width: 100%;
     padding: 16px 20px;
     margin-bottom: 20px;
-    background: rgba(13, 30, 49, 0.8);
+    background: rgba(10, 22, 35, 0.6);
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 12px;
     color: var(--text-primary);
@@ -444,7 +448,7 @@ nav a.active {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-    background: rgba(13, 30, 49, 0.9);
+    background: rgba(10, 22, 35, 0.8);
 }
 
 .contact-form button {
@@ -505,7 +509,7 @@ nav a.active {
 
 /* TRUST SECTION */
 .trust-section {
-    background: rgba(13, 30, 49, 0.6);
+    background: rgba(26, 58, 92, 0.3);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
