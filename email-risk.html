@@ -5,176 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Risk Analysis - AKATRON</title>
     <meta name="description" content="Comprehensive email security analysis to detect breaches, phishing risks, and data exposure">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="AKATRON_logo.jpg" alt="AKATRON Logo">
-                <h1>AKATRON</h1>
-            </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="osint.html">OSINT</a>
-                <a href="threat-intelligence.html">Threat Intel</a>
-                <a href="email-risk.html" class="active">Email Risk</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <header class="navbar">
+        <div class="logo">
+            <img src="akatron-logo.png" alt="AKATRON Logo" class="logo">
         </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="osint.html">OSINT</a>
+            <a href="threat-intelligence.html">Threat Intel</a>
+            <a href="email-risk.html" class="active">Email Risk</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section class="service-hero">
-        <div class="container">
-            <h1>📧 Email Risk Analysis</h1>
-            <p class="subtitle">Protect your inbox from breaches, phishing, and data exposure</p>
+    <section id="home" class="hero">
+        <h1 class="hero-title gold-text">📧 Email Risk Analysis</h1>
+        <p>Protect your inbox from breaches, phishing, and data exposure with comprehensive email security assessment</p>
+    </section>
+
+    <section id="services" class="section">
+        <div class="section-title">
+            <h2 class="gold-text">What We Analyze</h2>
+            <p class="section-subtitle">Comprehensive email security assessment across multiple threat vectors</p>
+        </div>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="service-icon">🔓</div>
+                <h3>Data Breach Detection</h3>
+                <p>Check if your email appears in known data breaches across 500+ compromised databases including LinkedIn, Adobe, Facebook, and more</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎣</div>
+                <h3>Phishing Risk Assessment</h3>
+                <p>Evaluate your vulnerability to phishing attacks, social engineering tactics, and email-based fraud attempts</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Digital Footprint Mapping</h3>
+                <p>Discover where your email is registered across platforms and what personal information is publicly exposed</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Security Reputation Score</h3>
+                <p>Get a comprehensive security score based on breach history, exposure level, and overall email hygiene</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Account Discovery</h3>
+                <p>Identify all online accounts associated with your email to understand your complete attack surface</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚠️</div>
+                <h3>Exposure Risk Analysis</h3>
+                <p>Assess what sensitive data (passwords, phone numbers, addresses) has been exposed in breaches</p>
+            </div>
         </div>
     </section>
 
-    <section class="service-details">
+    <section class="section" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 60px 20px;">
         <div class="container">
-            <div class="service-content">
-                <h2>What We Analyze</h2>
-                <div class="analysis-grid">
-                    <div class="analysis-card">
-                        <h3>🔓 Data Breach Detection</h3>
-                        <p>Check if your email appears in known data breaches across 500+ compromised databases</p>
-                    </div>
-                    <div class="analysis-card">
-                        <h3>🎣 Phishing Risk Assessment</h3>
-                        <p>Evaluate your vulnerability to phishing attacks and social engineering tactics</p>
-                    </div>
-                    <div class="analysis-card">
-                        <h3>🌐 Digital Footprint Mapping</h3>
-                        <p>Discover where your email is registered and what information is publicly exposed</p>
-                    </div>
-                    <div class="analysis-card">
-                        <h3>📊 Reputation Score</h3>
-                        <p>Get a comprehensive security score based on breach history and exposure level</p>
-                    </div>
+            <h2 class="gold-text" style="text-align: center; margin-bottom: 40px;">Our Email Analysis Process</h2>
+            
+            <div class="process-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+                <div class="step" style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 30px; text-align: center;">
+                    <div class="step-number" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; margin: 0 auto 20px;">1</div>
+                    <h3 style="color: #FFD700; margin-bottom: 15px;">Breach Database Scan</h3>
+                    <p style="color: #ccc;">We scan 500+ breach databases to check if your email has been compromised in major data breaches</p>
                 </div>
 
-                <h2>Our Process</h2>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Breach Database Scan</h3>
-                        <p>We scan 500+ breach databases to check if your email has been compromised</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Account Discovery</h3>
-                        <p>Using advanced OSINT tools, we identify all platforms where your email is registered</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Exposure Analysis</h3>
-                        <p>We assess what personal data is publicly visible and calculate your risk level</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Actionable Report</h3>
-                        <p>Receive a detailed report with specific recommendations to secure your email</p>
-                    </div>
+                <div class="step" style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 30px; text-align: center;">
+                    <div class="step-number" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; margin: 0 auto 20px;">2</div>
+                    <h3 style="color: #FFD700; margin-bottom: 15px;">Account Discovery</h3>
+                    <p style="color: #ccc;">Using advanced OSINT tools, we identify all platforms where your email is registered</p>
                 </div>
 
-                <h2>What You Get</h2>
-                <div class="deliverables">
-                    <ul>
-                        <li>✅ Complete breach history report</li>
-                        <li>✅ List of all compromised accounts</li>
-                        <li>✅ Exposed data types (passwords, phone numbers, addresses)</li>
-                        <li>✅ Digital footprint map showing all registered platforms</li>
-                        <li>✅ Risk level assessment (Low/Medium/High)</li>
-                        <li>✅ Step-by-step remediation guide</li>
-                        <li>✅ Ongoing monitoring recommendations</li>
-                    </ul>
+                <div class="step" style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 30px; text-align: center;">
+                    <div class="step-number" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; margin: 0 auto 20px;">3</div>
+                    <h3 style="color: #FFD700; margin-bottom: 15px;">Exposure Analysis</h3>
+                    <p style="color: #ccc;">We assess what personal data is publicly visible and calculate your overall risk level</p>
                 </div>
 
-                <h2>Why Email Security Matters</h2>
-                <div class="stats-box">
-                    <div class="stat">
-                        <h3>12 Billion+</h3>
-                        <p>Accounts compromised in data breaches</p>
-                    </div>
-                    <div class="stat">
-                        <h3>91%</h3>
-                        <p>Of cyberattacks start with phishing emails</p>
-                    </div>
-                    <div class="stat">
-                        <h3>₹50,000+</h3>
-                        <p>Average loss from email-based fraud in India</p>
-                    </div>
-                </div>
-
-                <h2>Pricing</h2>
-                <div class="pricing-cards">
-                    <div class="price-card">
-                        <h3>One-Time Audit</h3>
-                        <div class="price">FREE</div>
-                        <p>First-time clients only</p>
-                        <ul>
-                            <li>Single email analysis</li>
-                            <li>Breach check</li>
-                            <li>Basic report</li>
-                            <li>24-hour delivery</li>
-                        </ul>
-                        <a href="#contact" class="cta-button">Get Free Audit</a>
-                    </div>
-                    <div class="price-card featured">
-                        <h3>Individual Plan</h3>
-                        <div class="price">₹299<span>/month</span></div>
-                        <p>Ongoing protection</p>
-                        <ul>
-                            <li>Weekly breach monitoring</li>
-                            <li>Real-time alerts</li>
-                            <li>Monthly reports</li>
-                            <li>Priority support</li>
-                        </ul>
-                        <a href="#contact" class="cta-button">Subscribe Now</a>
-                    </div>
-                    <div class="price-card">
-                        <h3>Business Plan</h3>
-                        <div class="price">₹2,999<span>/month</span></div>
-                        <p>Team protection</p>
-                        <ul>
-                            <li>Up to 50 emails</li>
-                            <li>Custom reports</li>
-                            <li>Team training</li>
-                            <li>24/7 support</li>
-                        </ul>
-                        <a href="#contact" class="cta-button">Contact Sales</a>
-                    </div>
+                <div class="step" style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 30px; text-align: center;">
+                    <div class="step-number" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; margin: 0 auto 20px;">4</div>
+                    <h3 style="color: #FFD700; margin-bottom: 15px;">Actionable Report</h3>
+                    <p style="color: #ccc;">Receive a detailed report with specific recommendations to secure your email and accounts</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Ready to Secure Your Email?</h2>
-            <p>Get your free email risk analysis today</p>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                <select name="service" required>
-                    <option value="">Select Service</option>
-                    <option value="free-audit">Free Email Audit</option>
-                    <option value="individual">Individual Plan</option>
-                    <option value="business">Business Plan</option>
-                </select>
-                <textarea name="message" placeholder="Tell us about your concerns" rows="4"></textarea>
-                <button type="submit">Submit Request</button>
-            </form>
+    <section class="section">
+        <div class="section-title">
+            <h2 class="gold-text">What You Get</h2>
+            <p class="section-subtitle">Comprehensive email security assessment delivered in 24 hours</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 40px;">
+            <ul style="list-style: none; padding: 0; color: #ccc;">
+                <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,215,0,0.1); font-size: 18px;">✅ Complete breach history report</li>
+                <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,215,0,0.1); font-size: 18px;">✅ List of all compromised accounts</li>
+                <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,215,0,0.1); font-size: 18px;">✅ Exposed data types (passwords, phone numbers, addresses)</li>
+                <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,215,0,0.1); font-size: 18px;">✅ Digital footprint map showing all registered platforms</li>
+                <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,215,0,0.1); font-size: 18px;">✅ Risk level assessment (Low/Medium/High)</li>
+                <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,215,0,0.1); font-size: 18px;">✅ Step-by-step remediation guide</li>
+                <li style="padding: 15px 0; font-size: 18px;">✅ Ongoing monitoring recommendations</li>
+            </ul>
         </div>
     </section>
 
-    <footer>
+    <section class="section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); padding: 60px 20px;">
         <div class="container">
-            <p>&copy; 2025 AKATRON. Protecting India, One Person at a Time.</p>
-            <p>Email: akatronguardian22@gmail.com | LinkedIn: <a href="https://linkedin.com/in/arpit-katiyar-akatron" target="_blank">Arpit Katiyar</a></p>
+            <h2 class="gold-text" style="text-align: center; margin-bottom: 40px;">Why Email Security Matters</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                <div style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 40px; text-align: center;">
+                    <h3 style="color: #FFD700; font-size: 48px; margin-bottom: 10px;">12 Billion+</h3>
+                    <p style="color: #ccc; font-size: 18px;">Accounts compromised in data breaches</p>
+                </div>
+                <div style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 40px; text-align: center;">
+                    <h3 style="color: #FFD700; font-size: 48px; margin-bottom: 10px;">91%</h3>
+                    <p style="color: #ccc; font-size: 18px;">Of cyberattacks start with phishing emails</p>
+                </div>
+                <div style="background: rgba(255,215,0,0.05); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 40px; text-align: center;">
+                    <h3 style="color: #FFD700; font-size: 48px; margin-bottom: 10px;">₹50,000+</h3>
+                    <p style="color: #ccc; font-size: 18px;">Average loss from email-based fraud in India</p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2 class="gold-text">Email Risk Analysis Pricing</h2>
+            <p class="section-subtitle">Transparent pricing for comprehensive email security</p>
+        </div>
+
+        <div class="pricing-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+            <div class="price-card" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 40px; text-align: center;">
+                <h3 style="color: #FFD700; font-size: 24px; margin-bottom: 20px;">One-Time Audit</h3>
+                <div class="price" style="font-size: 48px; color: #FFD700; font-weight: bold; margin: 20px 0;">FREE</div>
+                <p style="color: #ccc; margin-bottom: 30px;">First-time clients only</p>
+                <ul style="list-style: none; padding: 0; text-align: left; color: #ccc;">
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Single email analysis</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Breach check</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Basic report</li>
+                    <li style="padding: 10px 0;">✅ 24-hour delivery</li>
+                </ul>
+                <a href="#contact" class="btn" style="display: inline-block; margin-top: 30px; background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold;">Get Free Audit</a>
+            </div>
+
+            <div class="price-card" style="background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); border: 3px solid #FFD700; border-radius: 15px; padding: 40px; text-align: center; transform: scale(1.05); box-shadow: 0 10px 40px rgba(255,215,0,0.3);">
+                <div style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 20px; font-weight: bold;">MOST POPULAR</div>
+                <h3 style="color: #FFD700; font-size: 24px; margin-bottom: 20px;">Individual Plan</h3>
+                <div class="price" style="font-size: 48px; color: #FFD700; font-weight: bold; margin: 20px 0;">₹299<span style="font-size: 20px;">/month</span></div>
+                <p style="color: #ccc; margin-bottom: 30px;">Ongoing protection</p>
+                <ul style="list-style: none; padding: 0; text-align: left; color: #ccc;">
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Weekly breach monitoring</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Real-time alerts</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Monthly reports</li>
+                    <li style="padding: 10px 0;">✅ Priority support</li>
+                </ul>
+                <a href="#contact" class="btn" style="display: inline-block; margin-top: 30px; background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold;">Subscribe Now</a>
+            </div>
+
+            <div class="price-card" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid rgba(255,215,0,0.3); border-radius: 15px; padding: 40px; text-align: center;">
+                <h3 style="color: #FFD700; font-size: 24px; margin-bottom: 20px;">Business Plan</h3>
+                <div class="price" style="font-size: 48px; color: #FFD700; font-weight: bold; margin: 20px 0;">₹2,999<span style="font-size: 20px;">/month</span></div>
+                <p style="color: #ccc; margin-bottom: 30px;">Team protection</p>
+                <ul style="list-style: none; padding: 0; text-align: left; color: #ccc;">
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Up to 50 emails</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Custom reports</li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,215,0,0.1);">✅ Team training</li>
+                    <li style="padding: 10px 0;">✅ 24/7 support</li>
+                </ul>
+                <a href="#contact" class="btn" style="display: inline-block; margin-top: 30px; background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold;">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-title">
+            <h2 class="gold-text">Ready to Secure Your Email?</h2>
+            <p class="contact-intro">Get your free email risk analysis today</p>
+        </div>
+
+        <form action="https://formspree.io/f/xbddrdqv" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="free-audit">Free Email Audit</option>
+                <option value="individual">Individual Plan (₹299/month)</option>
+                <option value="business">Business Plan (₹2,999/month)</option>
+            </select>
+            <textarea name="message" placeholder="Tell us about your concerns" rows="4"></textarea>
+            <button type="submit" class="btn">Submit Request</button>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <p><strong>AKATRON</strong> — AI Cybersecurity & OSINT Intelligence</p>
+        <p>Delivering confidential, ethical, and actionable intelligence.</p>
+        <p>© 2025 AKATRON. All rights reserved.</p>
+        <p class="disclaimer">
+            AKATRON provides cybersecurity intelligence and OSINT research for defensive, ethical, and lawful purposes only.
+        </p>
     </footer>
 </body>
 </html>
