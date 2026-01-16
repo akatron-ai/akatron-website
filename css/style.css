@@ -1,13 +1,13 @@
 /* AKATRON - Premium Cybersecurity Website */
-/* 60-30-10 COLOR RULE: Blue (60%), Gold (30%), White (10%) */
+/* 60-30-10 COLOR RULE: Blue #0d1e31 (60%), Gold (30%), White (10%) */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    /* PRIMARY COLOR - BLUE (60% - Backgrounds, large areas) */
-    --primary-blue: #1e3a8a;
-    --primary-blue-dark: #1e293b;
-    --primary-blue-light: #3b82f6;
+    /* PRIMARY COLOR - BLUE FROM LOGO (60% - Backgrounds, large areas) */
+    --primary-blue: #0d1e31;
+    --primary-blue-dark: #0a1623;
+    --primary-blue-light: #1a3a5c;
     
     /* SECONDARY COLOR - GOLD (30% - Accents, highlights) */
     --gold: #FFD700;
@@ -20,8 +20,8 @@
     --text-light: #e2e8f0;
     
     /* Supporting colors */
-    --shadow: rgba(30, 58, 138, 0.3);
-    --overlay: rgba(30, 41, 59, 0.95);
+    --shadow: rgba(13, 30, 49, 0.5);
+    --overlay: rgba(10, 22, 35, 0.95);
 }
 
 * {
@@ -32,7 +32,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--primary-blue-dark); /* BLUE 60% */
+    background: var(--primary-blue); /* BLUE 60% */
     color: var(--text-light); /* WHITE 10% */
     line-height: 1.6;
     overflow-x: hidden;
@@ -120,7 +120,7 @@ nav a.active {
 
 /* HERO SECTION - Blue background with Gold text */
 .hero {
-    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 50%, var(--primary-blue-dark) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 50%, var(--primary-blue-light) 100%); /* BLUE 60% */
     padding: 150px 50px;
     text-align: center;
     position: relative;
@@ -150,6 +150,7 @@ nav a.active {
     animation: shimmer 3s infinite;
     position: relative;
     z-index: 1;
+    background-size: 200% auto;
 }
 
 @keyframes shimmer {
@@ -213,11 +214,11 @@ nav a.active {
 /* SECTIONS - Blue backgrounds */
 .section {
     padding: 100px 50px;
-    background: var(--primary-blue-dark); /* BLUE 60% */
+    background: var(--primary-blue); /* BLUE 60% */
 }
 
 .section:nth-child(even) {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%); /* BLUE 60% */
 }
 
 .container {
@@ -263,13 +264,14 @@ nav a.active {
 }
 
 .service-card {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 41, 59, 0.5) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, rgba(13, 30, 49, 0.6) 0%, rgba(10, 22, 35, 0.8) 100%); /* BLUE 60% */
     border: 2px solid var(--gold); /* GOLD 30% */
     border-radius: 20px;
     padding: 50px;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .service-card::before {
@@ -323,13 +325,14 @@ nav a.active {
 }
 
 .price-card {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(30, 41, 59, 0.6) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, rgba(13, 30, 49, 0.7) 0%, rgba(10, 22, 35, 0.9) 100%); /* BLUE 60% */
     border: 2px solid var(--gold); /* GOLD 30% */
     border-radius: 25px;
     padding: 50px;
     text-align: center;
     transition: all 0.4s ease;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .price-card:hover {
@@ -354,11 +357,12 @@ nav a.active {
 .contact-form {
     max-width: 700px;
     margin: 0 auto;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 41, 59, 0.5) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, rgba(13, 30, 49, 0.6) 0%, rgba(10, 22, 35, 0.8) 100%); /* BLUE 60% */
     padding: 60px;
     border-radius: 25px;
     border: 2px solid var(--gold); /* GOLD 30% */
     box-shadow: 0 20px 60px var(--shadow);
+    backdrop-filter: blur(10px);
 }
 
 .contact-form input,
@@ -367,7 +371,7 @@ nav a.active {
     width: 100%;
     padding: 18px 25px;
     margin-bottom: 25px;
-    background: rgba(30, 58, 138, 0.5); /* BLUE 60% */
+    background: rgba(13, 30, 49, 0.8); /* BLUE 60% */
     border: 2px solid rgba(255, 215, 0, 0.3); /* GOLD 30% */
     border-radius: 12px;
     color: var(--white); /* WHITE 10% */
@@ -376,13 +380,18 @@ nav a.active {
     transition: all 0.3s ease;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(226, 232, 240, 0.5);
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--gold); /* GOLD 30% */
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    background: rgba(30, 58, 138, 0.7);
+    background: rgba(13, 30, 49, 0.9);
 }
 
 .contact-form button {
@@ -414,7 +423,7 @@ nav a.active {
 
 /* FOOTER - Blue with Gold text */
 .site-footer {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%); /* BLUE 60% */
     padding: 60px 50px;
     text-align: center;
     border-top: 3px solid var(--gold); /* GOLD 30% */
@@ -441,10 +450,11 @@ nav a.active {
 
 /* TRUST SECTION */
 .trust-section {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 41, 59, 0.5) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, rgba(13, 30, 49, 0.6) 0%, rgba(10, 22, 35, 0.8) 100%); /* BLUE 60% */
     border: 2px solid var(--gold); /* GOLD 30% */
     border-radius: 20px;
     padding: 50px;
+    backdrop-filter: blur(10px);
 }
 
 .premium-list {
