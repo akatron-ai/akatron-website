@@ -44,21 +44,24 @@
             </div>
 
             <div class="service-cards">
-                <div class="service-card">
+                <!-- OSINT Card - FULLY CLICKABLE -->
+                <div class="service-card" onclick="window.location.href='osint.html'">
                     <div class="service-icon">🕵️</div>
                     <h3>OSINT Investigations</h3>
                     <p>Professional open-source intelligence gathering for individuals, organizations, and threat intelligence with ethical precision and actionable insights.</p>
                     <a href="osint.html" class="card-link">Learn More →</a>
                 </div>
 
-                <div class="service-card">
+                <!-- Threat Intelligence Card - FULLY CLICKABLE -->
+                <div class="service-card" onclick="window.location.href='threat-intelligence.html'">
                     <div class="service-icon">🛡️</div>
                     <h3>Threat Intelligence</h3>
                     <p>Strategic cyber threat intelligence delivering high-confidence insights, adversary tracking, and proactive risk mitigation for security-conscious organizations.</p>
                     <a href="threat-intelligence.html" class="card-link">Learn More →</a>
                 </div>
 
-                <div class="service-card">
+                <!-- Email Risk Card - FULLY CLICKABLE -->
+                <div class="service-card" onclick="window.location.href='email-risk.html'">
                     <div class="service-icon">📧</div>
                     <h3>Email Risk Analysis</h3>
                     <p>Comprehensive email security assessment detecting breaches, phishing risks, and data exposure across 500+ compromised databases.</p>
@@ -77,25 +80,25 @@
             </div>
             
             <div class="service-cards">
-                <div class="service-card">
+                <div class="service-card" style="cursor: default;">
                     <div class="service-icon">🎯</div>
                     <h3>Precision Intelligence</h3>
                     <p>High-confidence intelligence with verified sources and actionable insights</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" style="cursor: default;">
                     <div class="service-icon">⚖️</div>
                     <h3>Ethical Standards</h3>
                     <p>All operations conducted within legal and ethical frameworks</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" style="cursor: default;">
                     <div class="service-icon">🔒</div>
                     <h3>Confidential</h3>
                     <p>Strict confidentiality protocols protecting your sensitive information</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" style="cursor: default;">
                     <div class="service-icon">⚡</div>
                     <h3>Rapid Delivery</h3>
                     <p>Time-sensitive intelligence delivered when you need it most</p>
@@ -193,6 +196,11 @@
                     });
                 }
             });
+        });
+
+        // Add hover effect to clickable cards
+        document.querySelectorAll('.service-card[onclick]').forEach(card => {
+            card.style.cursor = 'pointer';
         });
     </script>
 </body>
