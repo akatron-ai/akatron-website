@@ -1,27 +1,27 @@
-/* AKATRON - Premium Cybersecurity Website */
-/* 60-30-10 COLOR RULE: Blue #0d1e31 (60%), Gold (30%), White (10%) */
+/* AKATRON - Ultra Premium Cybersecurity Website */
+/* Professional Design by Elite Standards */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-    /* PRIMARY COLOR - BLUE FROM LOGO (60% - Backgrounds, large areas) */
-    --primary-blue: #0d1e31;
-    --primary-blue-dark: #0a1623;
-    --primary-blue-light: #1a3a5c;
+    /* Logo Blue - 60% */
+    --primary: #0d1e31;
+    --primary-dark: #0a1623;
+    --primary-light: #1a3a5c;
     
-    /* SECONDARY COLOR - GOLD (30% - Accents, highlights) */
-    --gold: #FFD700;
-    --gold-light: #FFF4CC;
-    --gold-dark: #DAA520;
+    /* Gold - 30% */
+    --accent: #FFD700;
+    --accent-light: #FFE55C;
+    --accent-dark: #D4AF37;
     
-    /* ACCENT COLOR - WHITE (10% - Text, small highlights) */
-    --white: #ffffff;
-    --white-soft: #f8fafc;
-    --text-light: #e2e8f0;
+    /* White - 10% */
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
     
-    /* Supporting colors */
-    --shadow: rgba(13, 30, 49, 0.5);
-    --overlay: rgba(10, 22, 35, 0.95);
+    /* Glass effects */
+    --glass-bg: rgba(13, 30, 49, 0.7);
+    --glass-border: rgba(255, 215, 0, 0.2);
 }
 
 * {
@@ -30,41 +30,58 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--primary-blue); /* BLUE 60% */
-    color: var(--text-light); /* WHITE 10% */
-    line-height: 1.6;
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-/* NAVIGATION - Blue background with Gold accents */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* NAVIGATION - Premium Glass Effect */
 .navbar {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); /* BLUE 60% */
-    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(13, 30, 49, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px var(--shadow);
-    border-bottom: 2px solid var(--gold); /* GOLD 30% */
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 15px 5%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
+    cursor: pointer;
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid var(--gold); /* GOLD 30% */
-    transition: transform 0.4s ease;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    border: 2px solid var(--accent);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
 .logo img:hover {
@@ -72,57 +89,63 @@ body {
 }
 
 .logo h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 900;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light)); /* GOLD 30% */
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 nav {
     display: flex;
-    gap: 35px;
+    gap: 40px;
+    align-items: center;
 }
 
 nav a {
-    color: var(--white); /* WHITE 10% */
+    color: var(--text-secondary);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 15px;
     position: relative;
     transition: all 0.3s ease;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
-nav a::after {
+nav a::before {
     content: '';
     position: absolute;
     bottom: -5px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light)); /* GOLD 30% */
+    height: 2px;
+    background: var(--accent);
     transition: width 0.3s ease;
 }
 
-nav a:hover::after,
-nav a.active::after {
+nav a:hover::before,
+nav a.active::before {
     width: 100%;
 }
 
 nav a:hover,
 nav a.active {
-    color: var(--gold); /* GOLD 30% */
+    color: var(--accent);
 }
 
-/* HERO SECTION - Blue background with Gold text */
+/* HERO SECTION - Premium */
 .hero {
-    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 50%, var(--primary-blue-light) 100%); /* BLUE 60% */
-    padding: 150px 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 150px 5% 100px;
     position: relative;
     overflow: hidden;
 }
@@ -130,65 +153,74 @@ nav a.active {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
     pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 72px;
-    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 800;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold)); /* GOLD 30% */
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 50%, var(--accent) 100%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s infinite;
+    animation: shimmer 3s linear infinite;
     position: relative;
     z-index: 1;
-    background-size: 200% auto;
+    letter-spacing: -2px;
 }
 
 @keyframes shimmer {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
 }
 
 .subtitle {
-    font-size: 28px;
-    color: var(--gold); /* GOLD 30% */
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: clamp(20px, 3vw, 32px);
+    color: var(--accent);
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .hero p {
-    font-size: 18px;
-    color: var(--text-light); /* WHITE 10% */
-    max-width: 800px;
-    margin: 0 auto 40px;
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 50px;
     line-height: 1.8;
+    font-weight: 400;
 }
 
-/* BUTTONS - Gold with Blue hover */
+/* BUTTONS - Premium */
 .btn {
     display: inline-block;
-    padding: 18px 45px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark)); /* GOLD 30% */
-    color: var(--primary-blue-dark); /* BLUE 60% */
+    padding: 18px 40px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--primary);
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 18px;
-    transition: all 0.4s ease;
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
     position: relative;
     overflow: hidden;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .btn::before {
@@ -198,7 +230,7 @@ nav a.active {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.5s ease;
 }
 
@@ -207,18 +239,18 @@ nav a.active {
 }
 
 .btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
 }
 
-/* SECTIONS - Blue backgrounds */
+/* SECTIONS */
 .section {
-    padding: 100px 50px;
-    background: var(--primary-blue); /* BLUE 60% */
+    padding: 120px 5%;
+    position: relative;
 }
 
 .section:nth-child(even) {
-    background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%); /* BLUE 60% */
+    background: linear-gradient(135deg, rgba(26, 58, 92, 0.3) 0%, transparent 100%);
 }
 
 .container {
@@ -232,46 +264,48 @@ nav a.active {
 }
 
 .section-title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light)); /* GOLD 30% */
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: -1px;
 }
 
 .gold-text {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light)); /* GOLD 30% */
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .section-subtitle {
-    font-size: 20px;
-    color: var(--text-light); /* WHITE 10% */
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--text-secondary);
     font-weight: 400;
 }
 
-/* SERVICE CARDS - Blue with Gold borders */
+/* SERVICE CARDS - Glassmorphism */
 .service-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
     margin-top: 60px;
 }
 
 .service-card {
-    background: linear-gradient(135deg, rgba(13, 30, 49, 0.6) 0%, rgba(10, 22, 35, 0.8) 100%); /* BLUE 60% */
-    border: 2px solid var(--gold); /* GOLD 30% */
+    background: rgba(13, 30, 49, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
-    padding: 50px;
-    transition: all 0.4s ease;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(10px);
 }
 
 .service-card::before {
@@ -292,169 +326,190 @@ nav a.active {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(255, 215, 0, 0.3);
-    border-color: var(--gold-light);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
 }
 
 .service-icon {
-    font-size: 60px;
-    margin-bottom: 25px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: inline-block;
     filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
 }
 
 .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: var(--gold); /* GOLD 30% */
-    margin-bottom: 20px;
-    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .service-card p {
-    color: var(--text-light); /* WHITE 10% */
+    color: var(--text-secondary);
     line-height: 1.8;
-    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 
-/* PRICING CARDS - Blue with Gold accents */
+.card-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    gap: 10px;
+}
+
+/* PRICING CARDS */
 .pricing-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 60px;
 }
 
 .price-card {
-    background: linear-gradient(135deg, rgba(13, 30, 49, 0.7) 0%, rgba(10, 22, 35, 0.9) 100%); /* BLUE 60% */
-    border: 2px solid var(--gold); /* GOLD 30% */
-    border-radius: 25px;
-    padding: 50px;
+    background: rgba(13, 30, 49, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: 40px;
     text-align: center;
-    transition: all 0.4s ease;
-    position: relative;
-    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .price-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.4);
+    border-color: var(--accent);
+    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.3);
 }
 
 .price-card.featured {
-    border: 3px solid var(--gold);
-    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.5);
+    border: 2px solid var(--accent);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4);
 }
 
 .price {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    font-weight: 900;
-    color: var(--gold); /* GOLD 30% */
-    margin: 30px 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 20px 0;
 }
 
-/* CONTACT FORM - Blue with Gold focus */
+/* CONTACT FORM - Premium Glass */
 .contact-form {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
-    background: linear-gradient(135deg, rgba(13, 30, 49, 0.6) 0%, rgba(10, 22, 35, 0.8) 100%); /* BLUE 60% */
-    padding: 60px;
-    border-radius: 25px;
-    border: 2px solid var(--gold); /* GOLD 30% */
-    box-shadow: 0 20px 60px var(--shadow);
-    backdrop-filter: blur(10px);
+    background: rgba(13, 30, 49, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 18px 25px;
-    margin-bottom: 25px;
-    background: rgba(13, 30, 49, 0.8); /* BLUE 60% */
-    border: 2px solid rgba(255, 215, 0, 0.3); /* GOLD 30% */
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    background: rgba(13, 30, 49, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 12px;
-    color: var(--white); /* WHITE 10% */
-    font-size: 16px;
+    color: var(--text-primary);
+    font-size: 15px;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(226, 232, 240, 0.5);
+    color: var(--text-muted);
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--gold); /* GOLD 30% */
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
     background: rgba(13, 30, 49, 0.9);
 }
 
 .contact-form button {
     width: 100%;
-    padding: 20px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark)); /* GOLD 30% */
-    color: var(--primary-blue-dark); /* BLUE 60% */
+    padding: 18px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--primary);
     border: none;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.4s ease;
-    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    letter-spacing: 0.5px;
 }
 
 .contact-form button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
 }
 
 .contact-intro {
     text-align: center;
     font-size: 18px;
-    color: var(--text-light); /* WHITE 10% */
+    color: var(--text-secondary);
     margin-bottom: 50px;
     line-height: 1.8;
 }
 
-/* FOOTER - Blue with Gold text */
+/* FOOTER */
 .site-footer {
-    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%); /* BLUE 60% */
-    padding: 60px 50px;
+    background: rgba(10, 22, 35, 0.9);
+    backdrop-filter: blur(20px);
+    padding: 60px 5%;
     text-align: center;
-    border-top: 3px solid var(--gold); /* GOLD 30% */
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .site-footer p {
-    color: var(--text-light); /* WHITE 10% */
-    margin: 15px 0;
-    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 12px 0;
+    font-size: 15px;
 }
 
 .site-footer strong {
-    color: var(--gold); /* GOLD 30% */
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
 }
 
 .disclaimer {
     margin-top: 30px;
-    font-size: 14px;
-    color: var(--text-light);
+    font-size: 13px;
+    color: var(--text-muted);
     opacity: 0.8;
 }
 
 /* TRUST SECTION */
 .trust-section {
-    background: linear-gradient(135deg, rgba(13, 30, 49, 0.6) 0%, rgba(10, 22, 35, 0.8) 100%); /* BLUE 60% */
-    border: 2px solid var(--gold); /* GOLD 30% */
+    background: rgba(13, 30, 49, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
     padding: 50px;
-    backdrop-filter: blur(10px);
 }
 
 .premium-list {
@@ -464,43 +519,40 @@ nav a.active {
 
 .premium-list li {
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-    color: var(--text-light); /* WHITE 10% */
-    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    color: var(--text-secondary);
+    font-size: 16px;
 }
 
 .premium-list li:last-child {
     border-bottom: none;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 20px;
+        padding: 20px 5%;
     }
 
     nav {
         margin-top: 20px;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 20px;
     }
 
-    .hero-title {
-        font-size: 48px;
+    .hero {
+        padding: 120px 5% 80px;
     }
 
-    .subtitle {
-        font-size: 22px;
+    .section {
+        padding: 80px 5%;
     }
 
     .service-cards,
     .pricing-cards {
         grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 60px 20px;
     }
 
     .contact-form {
@@ -525,13 +577,31 @@ nav a.active {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* SELECTION COLOR */
+/* SELECTION */
 ::selection {
-    background: var(--gold); /* GOLD 30% */
-    color: var(--primary-blue-dark); /* BLUE 60% */
+    background: var(--accent);
+    color: var(--primary);
 }
 
 ::-moz-selection {
-    background: var(--gold); /* GOLD 30% */
-    color: var(--primary-blue-dark); /* BLUE 60% */
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
 }
