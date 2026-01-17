@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-AKATRON');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y80FZF6W7Y"></script>
     <script>
@@ -212,6 +220,87 @@
         .hero-particle:nth-child(4) { top: 80%; left: 70%; animation-delay: 3s; }
         .hero-particle:nth-child(5) { top: 30%; left: 50%; animation-delay: 1.5s; }
         
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 80px;
+            color: var(--accent);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        .testimonial-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4af37, #f4e4a6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0a0e17;
+        }
+        
+        .author-info h4 {
+            color: var(--text-primary);
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+        
+        .author-info p {
+            color: var(--accent);
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .rating {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .hero {
@@ -227,6 +316,11 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-AKATRON"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- NAVIGATION -->
     <header class="navbar">
         <div class="logo">
@@ -238,6 +332,7 @@
             <a href="osint.html">OSINT</a>
             <a href="threat-intelligence.html">Threat Intel</a>
             <a href="email-risk.html">Email Risk</a>
+            <a href="blog.html">Blog</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -332,6 +427,102 @@
         </div>
     </section>
 
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="gold-text">Client Testimonials</h2>
+                <p class="section-subtitle">Trusted by security professionals worldwide</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "AKATRON's OSINT investigation uncovered critical information that helped us prevent a major security breach. Their professionalism and attention to detail are unmatched."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4>Rajesh Sharma</h4>
+                            <p>CISO, Tech Corp India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The threat intelligence reports from AKATRON have been instrumental in strengthening our security posture. Highly actionable and delivered with precision."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PK</div>
+                        <div class="author-info">
+                            <h4>Priya Kapoor</h4>
+                            <p>Security Director, FinTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Email risk analysis revealed our executives were compromised in multiple breaches. AKATRON's swift response and remediation guidance was invaluable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Amit Mehta</h4>
+                            <p>CEO, Digital Ventures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Professional, ethical, and incredibly thorough. AKATRON delivered intelligence that exceeded our expectations and helped us make critical business decisions."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sneha Kumar</h4>
+                            <p>Risk Manager, Global Bank</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The dark web monitoring service has given us peace of mind. We now know immediately if our data appears in compromised databases."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VG</div>
+                        <div class="author-info">
+                            <h4>Vikram Gupta</h4>
+                            <p>IT Head, Healthcare Group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "AKATRON's team is responsive, knowledgeable, and delivers results. Their OSINT capabilities are world-class and have proven invaluable to our organization."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">NP</div>
+                        <div class="author-info">
+                            <h4>Neha Patel</h4>
+                            <p>Security Analyst, E-commerce Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- STATS SECTION -->
     <section class="section">
         <div class="container">
@@ -402,6 +593,20 @@
             AKATRON provides cybersecurity intelligence and OSINT research for defensive, ethical, and lawful purposes only.
         </p>
     </footer>
+
+    <!-- Tawk.to Live Chat Widget -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/YOUR_TAWK_ID/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!-- End of Tawk.to Script -->
 
     <script>
         // Navbar scroll effect
