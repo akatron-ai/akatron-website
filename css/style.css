@@ -32,6 +32,7 @@
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
     --shadow-gold: 0 0 20px var(--gold-glow);
+    --shadow-gold-intense: 0 0 40px rgba(212, 175, 55, 0.4), 0 0 80px rgba(212, 175, 55, 0.2);
 }
 
 /* GLOBAL RESET */
@@ -274,7 +275,7 @@ nav a.active::after {
 }
 
 /* ===================================
-   SERVICE CARDS - MINIMAL LUXURY
+   SERVICE CARDS - PREMIUM GOLDEN GLOW
    =================================== */
 .service-cards {
     display: grid;
@@ -290,11 +291,13 @@ nav a.active::after {
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
     padding: 40px 32px;
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
+/* Premium Golden Glow Effect on Hover */
 .service-card::before {
     content: '';
     position: absolute;
@@ -304,23 +307,54 @@ nav a.active::after {
     height: 3px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 .service-card:hover {
-    border-color: var(--gold-border);
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-gold-intense);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, var(--bg-card) 100%);
 }
 
 .service-card:hover::before {
     opacity: 1;
 }
 
+.service-card:hover::after {
+    opacity: 1;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+}
+
+.service-card:hover h3 {
+    color: var(--gold);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
 .service-icon {
     font-size: 48px;
     margin-bottom: 24px;
     filter: grayscale(0.3);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .service-card h3 {
@@ -329,6 +363,9 @@ nav a.active::after {
     font-weight: 600;
     margin-bottom: 16px;
     color: var(--text-primary);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .service-card p {
@@ -336,6 +373,8 @@ nav a.active::after {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
 }
 
 .card-link {
@@ -346,6 +385,8 @@ nav a.active::after {
     letter-spacing: 0.3px;
     transition: all 0.3s ease;
     display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
 .card-link:hover {
@@ -461,6 +502,41 @@ nav a.active::after {
 }
 
 /* ===================================
+   PRICING CARDS
+   =================================== */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.price-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 50px 40px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.price-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-gold-intense);
+}
+
+.price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--gold);
+    margin: 20px 0;
+}
+
+/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 @media (max-width: 1024px) {
@@ -524,6 +600,11 @@ nav a.active::after {
     }
     
     .contact-form {
+        padding: 0 24px;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
         padding: 0 24px;
     }
 }
