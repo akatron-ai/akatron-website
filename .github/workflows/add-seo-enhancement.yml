@@ -1,0 +1,35 @@
+name: Add SEO Enhancement
+
+on:
+  workflow_dispatch:
+
+jobs:
+  add-seo:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: add-seo-tags
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Run SEO Update Script
+        run: python3 update_seo.py
+        
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.html
+          git diff --staged --quiet || git commit -m "✨ Add enhanced SEO meta tags to all pages"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: add-seo-tags
