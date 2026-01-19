@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PM5C4K52');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Techniques for Personal Security in 2026 | AKATRON</title>
+    <meta name="description" content="Learn how to use Open Source Intelligence (OSINT) techniques to protect your personal information and enhance your digital security.">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="keywords" content="OSINT, open source intelligence, personal security, digital privacy, cybersecurity, information security, OSINT tools, AKATRON">
+    <meta name="author" content="AKATRON">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://akatron-ai.github.io/akatron-website/blog/osint-techniques-personal-security.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://akatron-ai.github.io/akatron-website/blog/osint-techniques-personal-security.html">
+    <meta property="og:title" content="OSINT Techniques for Personal Security in 2026">
+    <meta property="og:description" content="Learn how to use OSINT techniques to protect your personal information and enhance digital security.">
+    <meta property="og:image" content="https://akatron-ai.github.io/akatron-website/akatron-logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://akatron-ai.github.io/akatron-website/blog/osint-techniques-personal-security.html">
+    <meta property="twitter:title" content="OSINT Techniques for Personal Security in 2026">
+    <meta property="twitter:description" content="Learn how to use OSINT techniques to protect your personal information.">
+    <meta property="twitter:image" content="https://akatron-ai.github.io/akatron-website/akatron-logo.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "OSINT Techniques for Personal Security in 2026",
+      "description": "Learn how to use Open Source Intelligence (OSINT) techniques to protect your personal information and enhance your digital security.",
+      "image": "https://akatron-ai.github.io/akatron-website/akatron-logo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "AKATRON"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AKATRON",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://akatron-ai.github.io/akatron-website/akatron-logo.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "dateModified": "2026-01-19"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../akatron-logo.png">
+    
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+        }
+        
+        .breadcrumb {
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .post-header {
+            margin-bottom: 50px;
+        }
+        
+        .post-title {
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .post-meta {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .post-content {
+            color: #b8bcc8;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        
+        .post-content h2 {
+            color: #d4af37;
+            font-size: 32px;
+            margin: 50px 0 20px;
+        }
+        
+        .post-content h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 40px 0 15px;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .post-content ul, .post-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .post-content li {
+            margin-bottom: 15px;
+        }
+        
+        .warning-box {
+            background: rgba(255, 59, 48, 0.1);
+            border-left: 4px solid #ff3b30;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .tip-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 2px solid #d4af37;
+            padding: 40px;
+            margin: 50px 0;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
+            color: #0a0e17;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-box .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .related-posts {
+            margin-top: 80px;
+            padding-top: 50px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .related-posts h3 {
+            color: #d4af37;
+            margin-bottom: 30px;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .related-card {
+            background: rgba(26, 31, 46, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .related-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+        }
+        
+        .related-card h4 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .related-card p {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        code {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="../akatron-logo.png" alt="AKATRON Logo">
+            <h1>AKATRON</h1>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../osint.html">OSINT</a>
+            <a href="../threat-intelligence.html">Threat Intel</a>
+            <a href="../email-risk.html">Email Risk</a>
+            <a href="../blog.html" class="active">Blog</a>
+        </nav>
+    </header>
+
+    <!-- BLOG POST -->
+    <article class="blog-post">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> / OSINT Techniques for Personal Security
+        </div>
+        
+        <div class="post-header">
+            <h1 class="post-title">OSINT Techniques for Personal Security in 2026</h1>
+            <div class="post-meta">
+                Published on January 19, 2026 | OSINT & Privacy | 8 min read
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <p>
+                <strong>Open Source Intelligence (OSINT)</strong> isn't just for intelligence agencies and cybersecurity professionals. In 2026, understanding OSINT techniques is essential for protecting your personal information in an increasingly connected world.
+            </p>
+            
+            <p>
+                This guide will teach you how to use OSINT methods to <strong>audit your digital footprint</strong>, identify privacy risks, and secure your online presence.
+            </p>
+            
+            <h2>🔍 What is OSINT?</h2>
+            
+            <p>
+                OSINT (Open Source Intelligence) is the practice of collecting and analyzing publicly available information from various sources including:
+            </p>
+            
+            <ul>
+                <li>Social media platforms (Facebook, LinkedIn, Twitter, Instagram)</li>
+                <li>Public records and databases</li>
+                <li>News articles and blogs</li>
+                <li>Government websites</li>
+                <li>Search engines and web archives</li>
+                <li>Domain registration data (WHOIS)</li>
+                <li>Data breach databases</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 Key Insight:</strong> If you can find information about yourself online, so can cybercriminals, stalkers, and identity thieves. OSINT helps you see what others can see about you.
+            </div>
+            
+            <h2>🎯 Why OSINT Matters for Personal Security</h2>
+            
+            <p>
+                In 2026, your digital footprint reveals more than you think:
+            </p>
+            
+            <ul>
+                <li><strong>Identity theft</strong> - Criminals use public info to impersonate you</li>
+                <li><strong>Social engineering</strong> - Attackers craft convincing phishing attacks</li>
+                <li><strong>Physical security</strong> - Location data can reveal your home address</li>
+                <li><strong>Financial fraud</strong> - Public records expose financial vulnerabilities</li>
+                <li><strong>Reputation damage</strong> - Old posts can resurface and harm your career</li>
+            </ul>
+            
+            <h2>🛠️ Essential OSINT Techniques for Self-Audit</h2>
+            
+            <h3>1. Google Yourself (Google Dorking)</h3>
+            
+            <p>
+                Start with basic searches, then use advanced operators:
+            </p>
+            
+            <ul>
+                <li><code>"Your Full Name"</code> - Exact match search</li>
+                <li><code>"Your Name" + "City"</code> - Location-specific results</li>
+                <li><code>site:linkedin.com "Your Name"</code> - Search specific sites</li>
+                <li><code>filetype:pdf "Your Name"</code> - Find documents with your name</li>
+                <li><code>inurl:resume "Your Name"</code> - Find exposed resumes</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ Common Finding:</strong> Many people discover old resumes, PDFs with personal info, or forgotten social media profiles during this search.
+            </div>
+            
+            <h3>2. Check Data Breach Databases</h3>
+            
+            <p>
+                Your email and passwords may have been exposed in data breaches. Check:
+            </p>
+            
+            <ul>
+                <li>Have I Been Pwned (haveibeenpwned.com)</li>
+                <li>DeHashed</li>
+                <li>Breach Directory databases</li>
+                <li>Dark web monitoring services</li>
+            </ul>
+            
+            <div class="cta-box">
+                <h3>🔐 Professional Breach Check</h3>
+                <p>
+                    AKATRON's Email Risk Analysis scans <strong>500+ breach databases</strong> including dark web sources not available to the public.
+                </p>
+                <p style="color: #d4af37; font-size: 24px; font-weight: 700; margin: 20px 0;">
+                    Only ₹999
+                </p>
+                <a href="../email-risk.html" class="btn">Check Your Email Now →</a>
+            </div>
+            
+            <h3>3. Social Media Audit</h3>
+            
+            <p>
+                Review all your social media accounts:
+            </p>
+            
+            <ul>
+                <li><strong>Privacy settings</strong> - Who can see your posts?</li>
+                <li><strong>Old posts</strong> - Delete embarrassing or sensitive content</li>
+                <li><strong>Tagged photos</strong> - Review and untag yourself</li>
+                <li><strong>Location data</strong> - Disable geotagging</li>
+                <li><strong>Friend lists</strong> - Remove unknown contacts</li>
+                <li><strong>Connected apps</strong> - Revoke unnecessary permissions</li>
+            </ul>
+            
+            <h3>4. Reverse Image Search</h3>
+            
+            <p>
+                Upload your profile photos to:
+            </p>
+            
+            <ul>
+                <li>Google Images (images.google.com)</li>
+                <li>TinEye (tineye.com)</li>
+                <li>Yandex Images (yandex.com/images)</li>
+            </ul>
+            
+            <p>
+                This reveals where your photos appear online, including:
+            </p>
+            
+            <ul>
+                <li>Fake profiles using your image</li>
+                <li>Websites you forgot about</li>
+                <li>Unauthorized use of your photos</li>
+            </ul>
+            
+            <h3>5. Username Search</h3>
+            
+            <p>
+                Search for your usernames across platforms using tools like:
+            </p>
+            
+            <ul>
+                <li>Namechk.com</li>
+                <li>KnowEm.com</li>
+                <li>Sherlock (GitHub tool)</li>
+            </ul>
+            
+            <p>
+                This helps you find forgotten accounts and ensure consistent privacy settings.
+            </p>
+            
+            <h3>6. WHOIS Lookup</h3>
+            
+            <p>
+                If you own a domain, check what personal information is publicly visible:
+            </p>
+            
+            <ul>
+                <li>Name and address</li>
+                <li>Email and phone number</li>
+                <li>Registration date</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 Privacy Tip:</strong> Use domain privacy protection (WHOIS privacy) to hide your personal information from public WHOIS databases.
+            </div>
+            
+            <h2>🔒 How to Reduce Your Digital Footprint</h2>
+            
+            <p>
+                Once you've audited your online presence, take these steps to minimize exposure:
+            </p>
+            
+            <h3>1. Delete Unused Accounts</h3>
+            
+            <ul>
+                <li>Old social media profiles</li>
+                <li>Forgotten forum accounts</li>
+                <li>Inactive email addresses</li>
+                <li>Unused shopping accounts</li>
+            </ul>
+            
+            <h3>2. Opt Out of Data Brokers</h3>
+            
+            <p>
+                Data brokers sell your personal information. Request removal from:
+            </p>
+            
+            <ul>
+                <li>Whitepages</li>
+                <li>Spokeo</li>
+                <li>PeopleFinder</li>
+                <li>BeenVerified</li>
+            </ul>
+            
+            <h3>3. Use Privacy-Focused Tools</h3>
+            
+            <ul>
+                <li><strong>Email</strong> - ProtonMail, Tutanota</li>
+                <li><strong>Search</strong> - DuckDuckGo, Startpage</li>
+                <li><strong>Browser</strong> - Brave, Firefox with privacy extensions</li>
+                <li><strong>VPN</strong> - NordVPN, ExpressVPN, Mullvad</li>
+                <li><strong>Password Manager</strong> - Bitwarden, 1Password</li>
+            </ul>
+            
+            <h3>4. Enable Two-Factor Authentication (2FA)</h3>
+            
+            <p>
+                Protect all important accounts with 2FA:
+            </p>
+            
+            <ul>
+                <li>Email accounts</li>
+                <li>Banking and financial services</li>
+                <li>Social media</li>
+                <li>Cloud storage</li>
+                <li>Work accounts</li>
+            </ul>
+            
+            <h2>🎓 Advanced OSINT Techniques</h2>
+            
+            <h3>Metadata Analysis</h3>
+            
+            <p>
+                Photos and documents contain hidden metadata (EXIF data) including:
+            </p>
+            
+            <ul>
+                <li>GPS coordinates (where photo was taken)</li>
+                <li>Camera model and settings</li>
+                <li>Date and time</li>
+                <li>Software used to edit</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ Privacy Risk:</strong> Posting photos with GPS metadata can reveal your home address, workplace, or travel patterns. Always strip metadata before sharing photos online.
+            </div>
+            
+            <h3>Wayback Machine</h3>
+            
+            <p>
+                The Internet Archive (archive.org) stores historical snapshots of websites. Check:
+            </p>
+            
+            <ul>
+                <li>Old versions of your personal website</li>
+                <li>Deleted social media posts (sometimes cached)</li>
+                <li>Previous versions of your online profiles</li>
+            </ul>
+            
+            <h2>🚨 Red Flags to Look For</h2>
+            
+            <p>
+                During your OSINT self-audit, watch for these warning signs:
+            </p>
+            
+            <ul>
+                <li>✗ Personal address visible in public records</li>
+                <li>✗ Phone number exposed on multiple sites</li>
+                <li>✗ Email found in data breaches</li>
+                <li>✗ Social Security Number (SSN) or financial info leaked</li>
+                <li>✗ Family members' information easily discoverable</li>
+                <li>✗ Daily routines and patterns visible on social media</li>
+                <li>✗ Workplace and schedule information public</li>
+            </ul>
+            
+            <h2>💼 Professional OSINT Services</h2>
+            
+            <p>
+                While DIY OSINT is valuable, professional services offer:
+            </p>
+            
+            <ul>
+                <li><strong>Comprehensive coverage</strong> - Access to premium databases</li>
+                <li><strong>Dark web monitoring</strong> - Check hidden forums and marketplaces</li>
+                <li><strong>Expert analysis</strong> - Identify risks you might miss</li>
+                <li><strong>Actionable recommendations</strong> - Step-by-step remediation plan</li>
+                <li><strong>Ongoing monitoring</strong> - Continuous protection</li>
+            </ul>
+            
+            <div class="cta-box">
+                <h3>🔍 Professional OSINT Investigation</h3>
+                <p>
+                    AKATRON's expert team conducts comprehensive digital footprint analysis, background verification, and threat actor research.
+                </p>
+                <p style="color: #d4af37; font-size: 24px; font-weight: 700; margin: 20px 0;">
+                    Starting at ₹3,999
+                </p>
+                <a href="../osint.html" class="btn">Learn More About OSINT Services →</a>
+            </div>
+            
+            <h2>📊 OSINT Statistics 2026</h2>
+            
+            <ul>
+                <li><strong>87%</strong> of people have personal information exposed online</li>
+                <li><strong>64%</strong> of identity theft cases start with OSINT reconnaissance</li>
+                <li><strong>2.5 billion</strong> records exposed in data breaches annually</li>
+                <li><strong>73%</strong> of social media users don't use privacy settings</li>
+            </ul>
+            
+            <h2>🎯 Conclusion</h2>
+            
+            <p>
+                OSINT techniques are powerful tools for understanding and protecting your digital footprint. By regularly auditing your online presence and implementing privacy best practices, you can significantly reduce your exposure to cyber threats.
+            </p>
+            
+            <p>
+                Remember: <strong>Privacy is not about having something to hide—it's about having something to protect.</strong>
+            </p>
+            
+            <div class="tip-box">
+                <strong>💡 Action Plan:</strong> Conduct an OSINT self-audit every 3-6 months to stay ahead of new privacy risks and data exposures.
+            </div>
+        </div>
+        
+        <div class="related-posts">
+            <h3>📚 Related Articles</h3>
+            <div class="related-grid">
+                <a href="top-5-signs-email-hacked-2026.html" class="related-card">
+                    <h4>Top 5 Signs Your Email Was Hacked</h4>
+                    <p>Learn the warning signs of email compromise and how to protect yourself</p>
+                </a>
+                <a href="../threat-intelligence.html" class="related-card">
+                    <h4>Threat Intelligence Services</h4>
+                    <p>Stay ahead of cyber threats with real-time monitoring</p>
+                </a>
+                <a href="../index.html#contact" class="related-card">
+                    <h4>Contact Security Experts</h4>
+                    <p>Get personalized cybersecurity consultation</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p><strong>AKATRON</strong> — Elite Cybersecurity & OSINT Intelligence</p>
+        <p>
+            <a href="../privacy-policy.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
+            <a href="../terms-of-service.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Terms of Service</a> | 
+            <a href="../disclaimer.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Disclaimer</a>
+        </p>
+        <p>© 2026 AKATRON. All rights reserved.</p>
+    </footer>
+</body>
+</html>
