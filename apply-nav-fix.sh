@@ -1,5 +1,5 @@
 #!/bin/bash
-# Navigation update script using sed
+# Navigation update script using sed - READY TO RUN
 
 echo "🚀 Updating navigation on all HTML files..."
 
@@ -24,3 +24,4 @@ sed -i 's|<a href="blog.html" class="active">Blog</a>|<a href="pricing.html">Pri
 sed -i 's|<a href="#contact">Contact</a>|<a href="about.html">About</a>|g' blog.html
 
 echo "✅ Navigation updated on all files!"
+echo "🎉 AKATRON website is now complete!"
