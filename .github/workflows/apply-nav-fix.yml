@@ -1,0 +1,35 @@
+name: Apply Navigation Fix
+
+on:
+  push:
+    branches:
+      - update-navigation-final
+    paths:
+      - 'apply-nav-fix.sh'
+
+jobs:
+  apply-fix:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: update-navigation-final
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Make script executable
+      run: chmod +x apply-nav-fix.sh
+    
+    - name: Run navigation fix
+      run: ./apply-nav-fix.sh
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add *.html
+        git diff --quiet && git diff --staged --quiet || git commit -m "✨ Update navigation menus on all pages"
+    
+    - name: Push changes
+      run: git push
