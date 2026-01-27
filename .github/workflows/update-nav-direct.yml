@@ -1,0 +1,49 @@
+name: Update Navigation Direct
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Update index.html
+      run: |
+        sed -i 's|<a href="blog.html">Blog</a>|<a href="pricing.html">Pricing</a>\n            <a href="blog.html">Blog</a>|' index.html
+        sed -i 's|<a href="#contact">Contact</a>|<a href="about.html">About</a>|' index.html
+    
+    - name: Update osint.html
+      run: |
+        sed -i 's|<a href="blog.html">Blog</a>|<a href="pricing.html">Pricing</a>\n            <a href="blog.html">Blog</a>|' osint.html
+        sed -i 's|<a href="#contact">Contact</a>|<a href="about.html">About</a>|' osint.html
+    
+    - name: Update threat-intelligence.html
+      run: |
+        sed -i 's|<a href="blog.html">Blog</a>|<a href="pricing.html">Pricing</a>\n            <a href="blog.html">Blog</a>|' threat-intelligence.html
+        sed -i 's|<a href="#contact">Contact</a>|<a href="about.html">About</a>|' threat-intelligence.html
+    
+    - name: Update email-risk.html
+      run: |
+        sed -i 's|<a href="blog.html">Blog</a>|<a href="pricing.html">Pricing</a>\n            <a href="blog.html">Blog</a>|' email-risk.html
+        sed -i 's|<a href="#contact">Contact</a>|<a href="about.html">About</a>|' email-risk.html
+    
+    - name: Update blog.html
+      run: |
+        sed -i 's|<a href="blog.html" class="active">Blog</a>|<a href="pricing.html">Pricing</a>\n            <a href="blog.html" class="active">Blog</a>|' blog.html
+        sed -i 's|<a href="#contact">Contact</a>|<a href="about.html">About</a>|' blog.html
+    
+    - name: Commit and push
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add *.html
+        git diff --quiet && git diff --staged --quiet || git commit -m "✨ Update navigation menus - Add Pricing & About pages"
+        git push
