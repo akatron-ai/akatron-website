@@ -1,0 +1,36 @@
+name: Fix Remaining Navigation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Fix osint.html
+      run: |
+        sed -i '/<a href="email-risk.html">Email Risk<\/a>/a\            <a href="pricing.html">Pricing<\/a>\n            <a href="blog.html">Blog<\/a>' osint.html
+    
+    - name: Fix threat-intelligence.html
+      run: |
+        sed -i '/<a href="email-risk.html">Email Risk<\/a>/a\            <a href="pricing.html">Pricing<\/a>\n            <a href="blog.html">Blog<\/a>' threat-intelligence.html
+    
+    - name: Fix email-risk.html
+      run: |
+        sed -i '/<a href="email-risk.html" class="active">Email Risk<\/a>/a\            <a href="pricing.html">Pricing<\/a>\n            <a href="blog.html">Blog<\/a>' email-risk.html
+    
+    - name: Commit and push
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add *.html
+        git diff --quiet && git diff --staged --quiet || git commit -m "✨ Fix remaining navigation links - Add Pricing & Blog"
+        git push
