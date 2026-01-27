@@ -1,0 +1,27 @@
+NAVIGATION UPDATE FOR index.html
+
+CURRENT (Lines 428-434):
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="osint.html">OSINT</a>
+            <a href="threat-intelligence.html">Threat Intel</a>
+            <a href="email-risk.html">Email Risk</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+REPLACE WITH:
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="osint.html">OSINT</a>
+            <a href="threat-intelligence.html">Threat Intel</a>
+            <a href="email-risk.html">Email Risk</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+        </nav>
+
+CHANGES:
+- Remove: <a href="#contact">Contact</a>
+- Add: <a href="pricing.html">Pricing</a> (before Blog)
+- Add: <a href="about.html">About</a> (after Blog)
