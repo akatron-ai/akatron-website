@@ -24,25 +24,77 @@
 ## 🎯 NEXT STEPS TO EARN MONEY
 
 ### STEP 1: Buy Custom Domain (PRIORITY #1)
-**Cost:** ₹500-1000/year
+**Cost:** ₹15,000 for 2 years (minimum purchase period)
 
-**Recommended Domains:**
-1. **akatron.ai** (Best option - professional)
-2. **akatron.io** (Tech-focused)
-3. **akatron.com** (Most popular)
+**Domain Options:**
 
-**Where to Buy:**
-- GoDaddy India: https://www.godaddy.com/en-in
-- Namecheap: https://www.namecheap.com
-- Google Domains: https://domains.google
+#### Option A: akatron.ai (PREMIUM - Most Professional) ⭐
+- **Cost:** ₹15,000 for 2 years
+- **Why:** .ai domains are premium for AI/tech companies
+- **Pros:** Professional, memorable, perfect for tech brand
+- **Cons:** Higher cost, 2-year minimum
 
-**After Purchase:**
-1. Go to GitHub repo settings
-2. Add custom domain in "Pages" section
-3. Update DNS records (CNAME)
-4. Enable HTTPS (automatic)
+#### Option B: akatron.io (Tech-Focused - Budget Friendly)
+- **Cost:** ₹2,000-3,000 for 2 years
+- **Why:** Popular with tech startups
+- **Pros:** Affordable, tech-friendly
+- **Cons:** Less premium than .ai
 
-**Result:** People can visit **www.akatron.ai** instead of long GitHub URL
+#### Option C: akatron.com (Most Popular)
+- **Cost:** ₹1,500-2,000 for 2 years
+- **Why:** Most recognized extension
+- **Pros:** Cheapest, universally recognized
+- **Cons:** Less tech-specific
+
+#### Option D: akatron.in (India-Focused)
+- **Cost:** ₹800-1,200 for 2 years
+- **Why:** Indian domain
+- **Pros:** Very cheap, good for Indian market
+- **Cons:** Less international appeal
+
+---
+
+### 💡 SMART STRATEGY: Start Small, Upgrade Later
+
+**Recommended Approach:**
+
+**Phase 1 (Month 1-3): Start with Budget Domain**
+- Buy **akatron.com** or **akatron.io** (₹1,500-3,000)
+- Test the market
+- Get first 5-10 clients
+- Generate ₹1-3 lakhs revenue
+
+**Phase 2 (Month 4+): Upgrade to Premium**
+- Buy **akatron.ai** (₹15,000) from earnings
+- Redirect old domain to new one
+- Professional brand upgrade
+- By this time, you'll have revenue to justify cost
+
+**Why This Works:**
+- Lower initial investment (₹2,000 vs ₹15,000)
+- Test business model first
+- Upgrade when profitable
+- No risk if business doesn't work
+
+---
+
+### ALTERNATIVE: Skip Domain Initially (FREE)
+
+**Use GitHub Pages URL for now:**
+- https://akatron-ai.github.io/akatron-website/
+- Start getting clients immediately
+- Buy domain after first client pays
+- Zero upfront cost
+
+**Pros:**
+- ₹0 investment
+- Start earning today
+- Buy domain from first client payment
+
+**Cons:**
+- Less professional URL
+- Harder to remember
+- Lower trust factor
 
 ---
 
@@ -61,6 +113,12 @@
 2. Embed in request-demo.html
 3. Responses go to Google Sheets
 
+**Option C: Tally Forms (FREE - Beautiful)**
+1. Go to: https://tally.so
+2. Create form
+3. Embed on website
+4. Unlimited responses free
+
 **Result:** When someone fills demo form, you get email notification
 
 ---
@@ -76,7 +134,7 @@
 
 **Button HTML:**
 ```html
-<a href="request-demo.html" class="cta-button">Request Free Demo</a>
+<a href="request-demo.html" class="btn" style="background: linear-gradient(135deg, #00ffff, #00ff88); color: #000; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px;">Request Free Demo</a>
 ```
 
 ---
@@ -85,7 +143,7 @@
 
 **Setup Steps:**
 1. Go to: https://search.google.com/search-console
-2. Add property: your-domain.com
+2. Add property: your-domain.com (or GitHub URL)
 3. Verify ownership (HTML file already added: googledd61dad9f741fb07.html)
 4. Submit sitemap: https://your-domain.com/sitemap.xml
 
@@ -133,7 +191,7 @@ No commitment, just 15 mins to show you how it works.
 Best regards,
 Arpit
 Founder, AKATRON
-www.akatron.ai
+akatron-ai.github.io/akatron-website
 ```
 
 **Action Plan:**
@@ -142,6 +200,13 @@ www.akatron.ai
 - Expected response: 5-10%
 - Expected demos: 5-10/week
 - Expected clients: 1-2/month
+
+**Where to Find Them:**
+- LinkedIn search: "Cybersecurity Analyst"
+- LinkedIn search: "SOC Manager"
+- LinkedIn search: "CISO"
+- Join cybersecurity groups
+- Comment on security posts
 
 ---
 
@@ -163,6 +228,11 @@ www.akatron.ai
 - 5-10 demo requests
 - 1-2 paying clients
 
+**ROI Calculation:**
+- Spend: ₹10,000/month
+- Get: 2 clients × ₹30,000 = ₹60,000
+- Profit: ₹50,000/month
+
 **Setup:**
 1. Go to: https://ads.google.com
 2. Create campaign
@@ -180,21 +250,28 @@ www.akatron.ai
 - 100 OSINT queries/month
 - Basic threat intelligence
 - Email support
-- Target: Small security teams
+- Target: Small security teams, freelancers
 
-**Professional Plan: ₹29,999/month**
+**Professional Plan: ₹29,999/month** ⭐ Most Popular
 - 500 OSINT queries/month
 - Advanced threat intelligence
 - Email risk assessment
 - Priority support
+- API access
 - Target: Medium companies
 
-**Enterprise Plan: Custom Pricing**
+**Enterprise Plan: ₹99,999/month**
 - Unlimited queries
 - Custom integrations
 - Dedicated support
 - SLA guarantee
-- Target: Large organizations
+- On-premise deployment option
+- Target: Large organizations, banks
+
+**One-Time Services:**
+- Single OSINT investigation: ₹5,000-15,000
+- Email risk assessment: ₹3,000-8,000
+- Threat intelligence report: ₹10,000-25,000
 
 ---
 
@@ -206,6 +283,9 @@ www.akatron.ai
 3. "Threat Intelligence Best Practices"
 4. "OSINT Techniques for Investigators"
 5. "Case Study: How We Detected a Phishing Campaign"
+6. "Dark Web Monitoring: What You Need to Know"
+7. "Social Engineering Detection Methods"
+8. "Cybersecurity Trends in India 2026"
 
 **Publish:** 2-3 posts/week
 
@@ -214,6 +294,13 @@ www.akatron.ai
 - Build authority
 - Get organic traffic (free)
 - Convert visitors to clients
+
+**SEO Keywords to Target:**
+- "OSINT tools India"
+- "threat intelligence platform"
+- "email security assessment"
+- "cybersecurity services India"
+- "dark web monitoring"
 
 ---
 
@@ -224,11 +311,14 @@ www.akatron.ai
 2. Post daily cybersecurity tips
 3. Share blog posts
 4. Engage with industry leaders
+5. Share case studies (anonymized)
 
 **Twitter/X:**
 - Share threat intelligence updates
 - OSINT tips
 - Industry news
+- Cybersecurity memes
+- Engage with infosec community
 
 **Result:** Build brand awareness, get followers, convert to clients
 
@@ -236,42 +326,57 @@ www.akatron.ai
 
 ## 💰 REVENUE TIMELINE
 
-### Month 1:
+### Month 1: ₹10,000-30,000
 - Setup domain, forms, analytics
 - LinkedIn outreach: 100 messages
 - Expected demos: 5-10
-- Expected revenue: ₹10,000-30,000
+- Expected clients: 1-2
+- Revenue: 1-2 clients × ₹10,000-30,000
 
-### Month 2:
+### Month 2: ₹50,000-1,00,000
 - Google Ads running
 - Blog posts published
 - LinkedIn outreach: 200 messages
 - Expected demos: 15-20
-- Expected revenue: ₹50,000-1,00,000
+- Expected clients: 3-5
+- Revenue: 3-5 clients × ₹15,000-30,000
 
-### Month 3:
+### Month 3: ₹1,50,000-3,00,000
 - SEO starting to work
 - Referrals coming in
 - Brand recognition growing
-- Expected revenue: ₹1,50,000-3,00,000
+- Expected clients: 8-10
+- Revenue: Mix of monthly + one-time
 
-### Month 6:
+### Month 6: ₹5,00,000-10,00,000/month
 - Established brand
 - Organic traffic
 - Multiple clients
-- Expected revenue: ₹5,00,000-10,00,000/month
+- Recurring revenue model
+- 20-30 active clients
 
 ---
 
 ## 🎯 IMMEDIATE ACTION ITEMS (Do Today!)
 
-### Priority 1: Buy Domain
-- [ ] Go to GoDaddy/Namecheap
-- [ ] Buy akatron.ai or akatron.io
+### Priority 1: Choose Domain Strategy
+**Option A: Budget Start (Recommended)**
+- [ ] Buy akatron.com or akatron.io (₹2,000-3,000)
 - [ ] Connect to GitHub Pages
+- [ ] Upgrade to akatron.ai later from earnings
+
+**Option B: Premium Start**
+- [ ] Buy akatron.ai (₹15,000)
+- [ ] Professional from day 1
+- [ ] Higher initial investment
+
+**Option C: Free Start**
+- [ ] Use GitHub URL for now
+- [ ] Buy domain after first client
+- [ ] Zero investment
 
 ### Priority 2: Setup Form
-- [ ] Sign up on Formspree
+- [ ] Sign up on Formspree or Tally
 - [ ] Get form ID
 - [ ] Update request-demo.html
 
@@ -283,7 +388,63 @@ www.akatron.ai
 ### Priority 4: Start Outreach
 - [ ] Find 50 cybersecurity professionals on LinkedIn
 - [ ] Send 10 messages today
-- [ ] Track responses
+- [ ] Track responses in spreadsheet
+
+---
+
+## 📊 COST BREAKDOWN
+
+### Option 1: Budget Start (Recommended)
+- Domain (akatron.com): ₹2,000 for 2 years
+- Lead form: ₹0 (Formspree free)
+- Google Analytics: ₹0 (free)
+- LinkedIn outreach: ₹0 (free)
+- **Total: ₹2,000**
+
+### Option 2: Premium Start
+- Domain (akatron.ai): ₹15,000 for 2 years
+- Lead form: ₹0 (Formspree free)
+- Google Analytics: ₹0 (free)
+- LinkedIn outreach: ₹0 (free)
+- **Total: ₹15,000**
+
+### Option 3: Zero Investment Start
+- GitHub Pages: ₹0 (free)
+- Lead form: ₹0 (free)
+- Google Analytics: ₹0 (free)
+- LinkedIn outreach: ₹0 (free)
+- **Total: ₹0**
+
+### Optional (Month 2+):
+- Google Ads: ₹10,000/month
+- LinkedIn Premium: ₹2,000/month (more outreach)
+- Email marketing tool: ₹1,000/month
+
+---
+
+## 💡 MY RECOMMENDATION
+
+**Start with Option 1 (Budget Domain) or Option 3 (Free)**
+
+**Why:**
+1. Lower risk (₹2,000 vs ₹15,000)
+2. Test market first
+3. Upgrade to .ai domain after first 2-3 clients
+4. By then you'll have ₹50,000-1,00,000 revenue
+5. ₹15,000 will feel like nothing
+
+**Timeline:**
+- **Week 1:** Buy akatron.com (₹2,000) + Setup forms
+- **Week 2-4:** LinkedIn outreach, get first client
+- **Month 2:** First client pays ₹30,000
+- **Month 3:** Buy akatron.ai (₹15,000) from earnings
+- **Month 4+:** Professional brand with premium domain
+
+**This way:**
+- You risk only ₹2,000 initially
+- Validate business model
+- Upgrade when profitable
+- Smart business decision
 
 ---
 
@@ -294,6 +455,8 @@ www.akatron.ai
 - Form integration
 - Google Ads setup
 - LinkedIn outreach strategy
+- Pricing strategy
+- Client onboarding
 
 Just ask! I'll help you with everything.
 
@@ -317,14 +480,26 @@ Just ask! I'll help you with everything.
 
 Your website is ready. Now execute the plan step by step.
 
-**Start with:**
-1. Buy domain (today)
-2. Setup form (today)
-3. Send 10 LinkedIn messages (today)
+**My Recommendation: Start with Budget Domain**
 
-**Then:**
-4. Google Search Console (tomorrow)
-5. Google Analytics (tomorrow)
-6. Google Ads (next week)
+**Today:**
+1. Buy akatron.com or akatron.io (₹2,000)
+2. Setup Formspree form (free)
+3. Send 10 LinkedIn messages (free)
+
+**This Week:**
+4. Google Search Console (free)
+5. Google Analytics (free)
+6. Send 50 more LinkedIn messages
+
+**Month 2:**
+7. First client pays ₹30,000
+8. Start Google Ads (₹10,000)
+
+**Month 3:**
+9. Upgrade to akatron.ai (₹15,000 from earnings)
+10. Professional brand established
 
 You got this! 💪
+
+**Total Initial Investment: ₹2,000 (or ₹0 if you start with GitHub URL)**
