@@ -1,0 +1,49 @@
+INSTANT FIX - Copy and Paste These Commands
+===========================================
+
+If you have the repository cloned locally, just run these commands:
+
+# Navigate to repository
+cd akatron-ai/akatron-website
+
+# Fix all files at once
+sed -i 's/href="#contact"/href="payment.html"/g' osint.html threat-intelligence.html email-risk.html pricing.html about.html
+
+# Commit and push
+git add .
+git commit -m "🔗 Fix all pricing buttons - Redirect to payment.html"
+git push
+
+# Done! ✅
+
+===========================================
+
+OR use this one-liner:
+
+cd akatron-ai/akatron-website && sed -i 's/href="#contact"/href="payment.html"/g' osint.html threat-intelligence.html email-risk.html pricing.html about.html && git add . && git commit -m "🔗 Fix all pricing buttons" && git push
+
+===========================================
+
+For Windows (PowerShell):
+
+cd akatron-ai/akatron-website
+(Get-Content osint.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content osint.html
+(Get-Content threat-intelligence.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content threat-intelligence.html
+(Get-Content email-risk.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content email-risk.html
+(Get-Content pricing.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content pricing.html
+(Get-Content about.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content about.html
+git add .
+git commit -m "🔗 Fix all pricing buttons"
+git push
+
+===========================================
+
+EASIEST METHOD - GitHub Actions:
+
+1. Go to: https://github.com/akatron-ai/akatron-website/actions/workflows/fix-pricing-buttons.yml
+2. Click "Run workflow" dropdown
+3. Click green "Run workflow" button
+4. Wait 30 seconds
+5. Done! ✅
+
+===========================================
