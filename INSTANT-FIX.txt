@@ -1,49 +1,71 @@
-INSTANT FIX - Copy and Paste These Commands
-===========================================
+═══════════════════════════════════════════════════════════════
+  AKATRON WEBSITE - INSTANT FIX (Copy & Paste)
+═══════════════════════════════════════════════════════════════
 
-If you have the repository cloned locally, just run these commands:
+🎯 TASK STATUS:
+✅ Demo Form - COMPLETE (already live)
+⏳ Pricing Buttons - READY (just run command below)
 
-# Navigate to repository
-cd akatron-ai/akatron-website
+═══════════════════════════════════════════════════════════════
 
-# Fix all files at once
-sed -i 's/href="#contact"/href="payment.html"/g' osint.html threat-intelligence.html email-risk.html pricing.html about.html
+🚀 FASTEST FIX - COPY THIS ENTIRE BLOCK:
 
-# Commit and push
-git add .
-git commit -m "🔗 Fix all pricing buttons - Redirect to payment.html"
-git push
+cd ~/akatron-website 2>/dev/null || cd ~/akatron-ai/akatron-website 2>/dev/null || cd ~/Desktop/akatron-website 2>/dev/null || cd ~/Documents/akatron-website 2>/dev/null || (echo "❌ Repo not found. Clone it first:" && echo "git clone https://github.com/akatron-ai/akatron-website.git" && exit 1) && chmod +x fix_buttons.sh && ./fix_buttons.sh && git add . && git commit -m "🔗 Fix all pricing buttons - Redirect to payment.html" && git push && echo "" && echo "🎉 SUCCESS! Website will update in 1-2 minutes."
 
-# Done! ✅
+═══════════════════════════════════════════════════════════════
 
-===========================================
+📋 WHAT THIS DOES:
+1. Finds your repo (checks common locations)
+2. Makes the script executable
+3. Runs the fix (updates 17 buttons in 5 files)
+4. Commits the changes
+5. Pushes to GitHub
+6. Done!
 
-OR use this one-liner:
+═══════════════════════════════════════════════════════════════
 
-cd akatron-ai/akatron-website && sed -i 's/href="#contact"/href="payment.html"/g' osint.html threat-intelligence.html email-risk.html pricing.html about.html && git add . && git commit -m "🔗 Fix all pricing buttons" && git push
+⚠️ IF REPO NOT FOUND, RUN THIS FIRST:
 
-===========================================
+git clone https://github.com/akatron-ai/akatron-website.git
+cd akatron-website
 
-For Windows (PowerShell):
+Then run the command above again.
 
-cd akatron-ai/akatron-website
-(Get-Content osint.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content osint.html
-(Get-Content threat-intelligence.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content threat-intelligence.html
-(Get-Content email-risk.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content email-risk.html
-(Get-Content pricing.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content pricing.html
-(Get-Content about.html) -replace 'href="#contact"', 'href="payment.html"' | Set-Content about.html
+═══════════════════════════════════════════════════════════════
+
+🪟 WINDOWS USERS - USE THIS INSTEAD:
+
+cd C:\Users\%USERNAME%\akatron-website
+@('osint.html','threat-intelligence.html','email-risk.html','pricing.html','about.html') | ForEach-Object { (Get-Content $_) -replace 'href="#contact"', 'href="payment.html"' | Set-Content $_ }
 git add .
 git commit -m "🔗 Fix all pricing buttons"
 git push
 
-===========================================
+═══════════════════════════════════════════════════════════════
 
-EASIEST METHOD - GitHub Actions:
+🌐 NO TERMINAL? USE GITHUB WEB:
 
-1. Go to: https://github.com/akatron-ai/akatron-website/actions/workflows/fix-pricing-buttons.yml
-2. Click "Run workflow" dropdown
-3. Click green "Run workflow" button
-4. Wait 30 seconds
-5. Done! ✅
+1. Go to: https://github.com/akatron-ai/akatron-website
+2. Click on each file: osint.html, threat-intelligence.html, 
+   email-risk.html, pricing.html, about.html
+3. Click the pencil icon (Edit)
+4. Press Ctrl+H (Find & Replace)
+5. Find: #contact
+6. Replace: payment.html
+7. Click "Commit changes"
+8. Repeat for all 5 files
 
-===========================================
+═══════════════════════════════════════════════════════════════
+
+✅ AFTER RUNNING:
+
+1. Wait 1-2 minutes
+2. Visit: https://akatron-ai.github.io/akatron-website/osint.html
+3. Click any "Get Started" button
+4. Should go to payment.html ✅
+
+═══════════════════════════════════════════════════════════════
+
+📚 MORE DETAILS: See EXECUTE-FIX-NOW.md
+
+═══════════════════════════════════════════════════════════════
