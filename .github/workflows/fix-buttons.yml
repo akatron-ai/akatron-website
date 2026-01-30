@@ -1,0 +1,53 @@
+name: Fix All Pricing Buttons
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  fix-buttons:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Fix all pricing button links
+        run: |
+          echo "🔧 Fixing all pricing button links..."
+          
+          # Replace href="#contact" with href="payment.html" in all files
+          sed -i 's/href="#contact"/href="payment.html"/g' osint.html
+          sed -i 's/href="#contact"/href="payment.html"/g' threat-intelligence.html
+          sed -i 's/href="#contact"/href="payment.html"/g' email-risk.html
+          sed -i 's/href="#contact"/href="payment.html"/g' pricing.html
+          sed -i 's/href="#contact"/href="payment.html"/g' about.html
+          
+          echo "✅ All files updated!"
+          
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            git diff --stat
+          fi
+          
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add osint.html threat-intelligence.html email-risk.html pricing.html about.html
+          git commit -m "🔗 Fix all pricing buttons - Redirect to payment.html"
+          git push
+          
+      - name: Success message
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          echo "🎉 SUCCESS! All pricing buttons have been fixed."
+          echo "✅ 17 buttons updated across 5 files"
+          echo "🌐 Website will be live in 1-2 minutes"
