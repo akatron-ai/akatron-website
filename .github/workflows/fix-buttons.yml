@@ -3,6 +3,9 @@ name: Fix All Pricing Buttons
 on:
   workflow_dispatch:  # Manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   fix-buttons:
     runs-on: ubuntu-latest
@@ -10,19 +13,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Fix all pricing button links
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+        
+      - name: Run fix script
         run: |
-          echo "🔧 Fixing all pricing button links..."
-          
-          # Replace href="#contact" with href="payment.html" in all files
-          sed -i 's/href="#contact"/href="payment.html"/g' osint.html
-          sed -i 's/href="#contact"/href="payment.html"/g' threat-intelligence.html
-          sed -i 's/href="#contact"/href="payment.html"/g' email-risk.html
-          sed -i 's/href="#contact"/href="payment.html"/g' pricing.html
-          sed -i 's/href="#contact"/href="payment.html"/g' about.html
-          
-          echo "✅ All files updated!"
+          python3 fix_pricing_buttons.py
           
       - name: Check for changes
         id: check_changes
@@ -31,9 +32,9 @@ jobs:
             echo "No changes detected"
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected"
-            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected:"
             git diff --stat
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
           
       - name: Commit and push changes
@@ -51,3 +52,5 @@ jobs:
           echo "🎉 SUCCESS! All pricing buttons have been fixed."
           echo "✅ 17 buttons updated across 5 files"
           echo "🌐 Website will be live in 1-2 minutes"
+          echo ""
+          echo "View changes: https://github.com/${{ github.repository }}/commit/$(git rev-parse HEAD)"
