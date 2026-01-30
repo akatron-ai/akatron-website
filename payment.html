@@ -128,18 +128,59 @@
             box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
         }
         
-        .qr-code {
+        /* Premium QR Code Styling */
+        .qr-code-container {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 25px 0;
             text-align: center;
-            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
         }
         
-        .qr-code img {
-            max-width: 250px;
-            width: 100%;
-            border: 3px solid #d4af37;
-            border-radius: 10px;
-            padding: 10px;
+        .qr-code-header {
+            color: #d4af37;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .qr-code-wrapper {
             background: white;
+            border-radius: 15px;
+            padding: 20px;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        .qr-code-wrapper img {
+            display: block;
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .qr-code-info {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .qr-code-info p {
+            color: #b8bcc8;
+            font-size: 0.95rem;
+            margin: 8px 0;
+        }
+        
+        .qr-code-info .bank-name {
+            color: #d4af37;
+            font-weight: 600;
+            font-size: 1.05rem;
         }
         
         .payment-note {
@@ -219,6 +260,10 @@
             .payment-methods {
                 grid-template-columns: 1fr;
             }
+            
+            .qr-code-wrapper img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -291,10 +336,19 @@
                     <button class="copy-btn" onclick="copyToClipboard('arpitkatiayar261-1@okicici')">📋 Copy UPI ID</button>
                 </div>
                 
-                <div class="qr-code">
-                    <p style="color: #d4af37; margin-bottom: 10px; font-weight: 600;">Scan QR Code to Pay:</p>
-                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/f8e14311-9152-4995-a115-465cafcbc0ed/2026-01-30T04-58-54-311Z-aa269d56-chat-image-1769749134286-0.jpg" alt="Google Pay QR Code - Arpit Katiyar">
-                    <p style="color: #b8bcc8; font-size: 0.9rem; margin-top: 10px;">Kotak Mahindra Bank • Account ending 5868</p>
+                <!-- Premium QR Code Section -->
+                <div class="qr-code-container">
+                    <div class="qr-code-header">
+                        📲 Scan to Pay Instantly
+                    </div>
+                    <div class="qr-code-wrapper">
+                        <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/f8e14311-9152-4995-a115-465cafcbc0ed/2026-01-30T04-58-54-311Z-aa269d56-chat-image-1769749134286-0.jpg" alt="AKATRON Payment QR Code">
+                    </div>
+                    <div class="qr-code-info">
+                        <p class="bank-name">🏦 Kotak Mahindra Bank</p>
+                        <p>Account: ••••5868</p>
+                        <p style="font-size: 0.85rem; color: #888;">Scan with any UPI app to pay</p>
+                    </div>
                 </div>
                 
                 <p style="color: #b8bcc8; font-size: 0.9rem; margin-top: 20px;">
