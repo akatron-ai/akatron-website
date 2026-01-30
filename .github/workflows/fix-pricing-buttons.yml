@@ -1,0 +1,40 @@
+name: Fix All Pricing Buttons
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  fix-buttons:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Fix pricing buttons
+        run: |
+          echo "🔧 Fixing all pricing buttons..."
+          
+          # Fix osint.html
+          sed -i 's/href="#contact"/href="payment.html"/g' osint.html
+          
+          # Fix threat-intelligence.html
+          sed -i 's/href="#contact"/href="payment.html"/g' threat-intelligence.html
+          
+          # Fix email-risk.html
+          sed -i 's/href="#contact"/href="payment.html"/g' email-risk.html
+          
+          # Fix pricing.html
+          sed -i 's/href="#contact"/href="payment.html"/g' pricing.html
+          
+          # Fix about.html
+          sed -i 's/href="#contact"/href="payment.html"/g' about.html
+          
+          echo "✅ All files fixed!"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔗 Fix all pricing buttons - Redirect to payment.html" && git push)
