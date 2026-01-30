@@ -1,0 +1,83 @@
+/* ===================================
+   TAWK.TO CHAT WIDGET - PROFESSIONAL STYLING
+   =================================== */
+
+/* Hide the default Tawk.to branding and make it more professional */
+#tawk-bubble-container {
+    /* Position it professionally */
+    bottom: 20px !important;
+    right: 20px !important;
+    left: auto !important;
+}
+
+/* Style the chat bubble to match AKATRON branding */
+.tawk-button {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%) !important;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3) !important;
+    border: 2px solid rgba(212, 175, 55, 0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.tawk-button:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5) !important;
+}
+
+/* Style the chat window */
+.tawk-chat-panel {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+/* Style the header */
+.tawk-header {
+    background: linear-gradient(135deg, #0a0e17 0%, #12161f 100%) !important;
+    border-bottom: 2px solid #d4af37 !important;
+}
+
+/* Make it less intrusive on mobile */
+@media (max-width: 768px) {
+    #tawk-bubble-container {
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+    
+    .tawk-button {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+/* Professional animation */
+@keyframes tawk-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 24px rgba(212, 175, 55, 0.5);
+    }
+}
+
+.tawk-button {
+    animation: tawk-pulse 3s ease-in-out infinite !important;
+}
+
+/* Hide "Powered by Tawk.to" branding */
+.tawk-branding {
+    display: none !important;
+}
+
+.tawk-powered-by {
+    display: none !important;
+}
+
+/* Custom positioning to avoid footer overlap */
+body {
+    padding-bottom: 0 !important;
+}
+
+/* Ensure it doesn't overlap with footer on scroll */
+.tawk-min-container {
+    z-index: 999 !important;
+}
