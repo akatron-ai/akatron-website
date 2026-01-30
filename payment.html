@@ -134,7 +134,8 @@
         }
         
         .qr-code img {
-            max-width: 200px;
+            max-width: 250px;
+            width: 100%;
             border: 3px solid #d4af37;
             border-radius: 10px;
             padding: 10px;
@@ -286,13 +287,14 @@
                 <p style="color: #b8bcc8; margin-bottom: 20px;">Instant payment via UPI apps</p>
                 
                 <div class="payment-details">
-                    <p><strong>UPI ID:</strong> arpitkatiayar261@paytm</p>
-                    <button class="copy-btn" onclick="copyToClipboard('arpitkatiayar261@paytm')">📋 Copy UPI ID</button>
+                    <p><strong>UPI ID:</strong> arpitkatiayar261-1@okicici</p>
+                    <button class="copy-btn" onclick="copyToClipboard('arpitkatiayar261-1@okicici')">📋 Copy UPI ID</button>
                 </div>
                 
                 <div class="qr-code">
-                    <p style="color: #d4af37; margin-bottom: 10px;">Scan QR Code:</p>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=arpitkatiayar261@paytm%26pn=AKATRON%26cu=INR" alt="UPI QR Code">
+                    <p style="color: #d4af37; margin-bottom: 10px; font-weight: 600;">Scan QR Code to Pay:</p>
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/f8e14311-9152-4995-a115-465cafcbc0ed/2026-01-30T04-58-54-311Z-aa269d56-chat-image-1769749134286-0.jpg" alt="Google Pay QR Code - Arpit Katiyar">
+                    <p style="color: #b8bcc8; font-size: 0.9rem; margin-top: 10px;">Kotak Mahindra Bank • Account ending 5868</p>
                 </div>
                 
                 <p style="color: #b8bcc8; font-size: 0.9rem; margin-top: 20px;">
@@ -310,9 +312,9 @@
                 
                 <div class="payment-details">
                     <p><strong>Account Name:</strong> Arpit Katiyar</p>
-                    <p><strong>Account No:</strong> [Your Account Number]</p>
-                    <p><strong>IFSC Code:</strong> [Your IFSC Code]</p>
-                    <p><strong>Bank:</strong> [Your Bank Name]</p>
+                    <p><strong>Account No:</strong> 4050355868</p>
+                    <p><strong>IFSC Code:</strong> KKBK0005136</p>
+                    <p><strong>Bank:</strong> Kotak Mahindra Bank</p>
                     <button class="copy-btn" onclick="copyBankDetails()">📋 Copy All Details</button>
                 </div>
                 
@@ -382,7 +384,7 @@
                 
                 <h4 style="color: #d4af37; margin-bottom: 15px;">Step 2: Make Payment</h4>
                 <p style="color: #e0e0e0; margin-bottom: 20px;">
-                    Use any of the payment methods above. After payment, you'll receive a confirmation.
+                    Use any of the payment methods above. Scan the QR code or use UPI ID for instant payment.
                 </p>
                 
                 <h4 style="color: #d4af37; margin-bottom: 15px;">Step 3: Send Payment Proof</h4>
@@ -507,9 +509,9 @@
         // Copy bank details
         function copyBankDetails() {
             const details = `Account Name: Arpit Katiyar
-Account No: [Your Account Number]
-IFSC Code: [Your IFSC Code]
-Bank: [Your Bank Name]`;
+Account No: 4050355868
+IFSC Code: KKBK0005136
+Bank: Kotak Mahindra Bank`;
             
             navigator.clipboard.writeText(details).then(function() {
                 alert('✅ Bank details copied to clipboard!');
@@ -518,35 +520,9 @@ Bank: [Your Bank Name]`;
             });
         }
         
-        // Razorpay integration (you'll need to add your Razorpay key)
+        // Razorpay integration
         function openRazorpay() {
             alert('💳 Razorpay integration coming soon!\n\nFor now, please use UPI or Bank Transfer.\n\nContact us at arpitkatiayar261@gmail.com for card payments.');
-            
-            // When you set up Razorpay, replace above with:
-            /*
-            var options = {
-                "key": "YOUR_RAZORPAY_KEY",
-                "amount": "99900", // Amount in paise (₹999)
-                "currency": "INR",
-                "name": "AKATRON",
-                "description": "Cybersecurity Services",
-                "image": "akatron-logo.png",
-                "handler": function (response){
-                    alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
-                    // Send payment confirmation email
-                },
-                "prefill": {
-                    "name": "",
-                    "email": "",
-                    "contact": ""
-                },
-                "theme": {
-                    "color": "#d4af37"
-                }
-            };
-            var rzp1 = new Razorpay(options);
-            rzp1.open();
-            */
         }
     </script>
 </body>
