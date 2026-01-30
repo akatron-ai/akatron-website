@@ -298,55 +298,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
             color: #0a0e17;
+            font-weight: 700;
+            font-size: 18px;
         }
         
         .author-info h4 {
             color: var(--text-primary);
             margin: 0 0 5px 0;
-            font-size: 18px;
+            font-size: 16px;
         }
         
         .author-info p {
-            color: var(--accent);
+            color: var(--text-secondary);
             margin: 0;
             font-size: 14px;
         }
         
         .rating {
             color: #d4af37;
+            font-size: 20px;
             margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        /* Pricing Card Styles */
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            border-color: #d4af37;
-            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.25);
-        }
-
-        .pricing-card .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
         }
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .hero {
-                min-height: 75vh;
-                padding: 100px 20px 60px;
-            }
-            
             .hero-title::before,
             .hero-title::after {
                 display: none;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr !important;
             }
             
             .pricing-card {
@@ -380,21 +359,21 @@
           "name": "Email Risk Analysis",
           "price": "999",
           "priceCurrency": "INR",
-          "url": "https://akatron-ai.github.io/akatron-website/email-risk.html"
+          "url": "https://akatron-ai.github.io/akatron-website/payment.html"
         },
         {
           "@type": "Offer",
           "name": "OSINT Investigation",
           "price": "3999",
           "priceCurrency": "INR",
-          "url": "https://akatron-ai.github.io/akatron-website/osint.html"
+          "url": "https://akatron-ai.github.io/akatron-website/payment.html"
         },
         {
           "@type": "Offer",
-          "name": "Threat Intelligence",
+          "name": "Cybersecurity Audit",
           "price": "5999",
           "priceCurrency": "INR",
-          "url": "https://akatron-ai.github.io/akatron-website/threat-intelligence.html"
+          "url": "https://akatron-ai.github.io/akatron-website/payment.html"
         }
       ]
     }
@@ -431,6 +410,8 @@
             <a href="threat-intelligence.html">Threat Intel</a>
             <a href="email-risk.html">Email Risk</a>
             <a href="pricing.html">Pricing</a>
+            <a href="request-demo.html">Request Demo</a>
+            <a href="payment.html">Payment</a>
             <a href="blog.html">Blog</a>
             <a href="about.html">About</a>
         </nav>
@@ -498,29 +479,29 @@
                 <p class="section-subtitle">Elite intelligence services with uncompromising standards</p>
             </div>
             
-            <div class="service-cards">
-                <div class="service-card" style="cursor: default;">
-                    <div class="service-icon">🎯</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
                     <h3>Precision Intelligence</h3>
-                    <p>High-confidence intelligence with verified sources and actionable insights</p>
+                    <p>Actionable insights backed by rigorous verification and analysis methodologies</p>
                 </div>
 
-                <div class="service-card" style="cursor: default;">
-                    <div class="service-icon">⚖️</div>
-                    <h3>Ethical Standards</h3>
-                    <p>All operations conducted within legal and ethical frameworks</p>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Absolute Confidentiality</h3>
+                    <p>Military-grade security protocols protecting your sensitive information</p>
                 </div>
 
-                <div class="service-card" style="cursor: default;">
-                    <div class="service-icon">🔒</div>
-                    <h3>Confidential</h3>
-                    <p>Strict confidentiality protocols protecting your sensitive information</p>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Rapid Response</h3>
+                    <p>24/7 intelligence support with expedited delivery for critical operations</p>
                 </div>
 
-                <div class="service-card" style="cursor: default;">
-                    <div class="service-icon">⚡</div>
-                    <h3>Rapid Delivery</h3>
-                    <p>Time-sensitive intelligence delivered when you need it most</p>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Expert Team</h3>
+                    <p>Seasoned professionals with backgrounds in cybersecurity and intelligence</p>
                 </div>
             </div>
         </div>
@@ -531,20 +512,20 @@
         <div class="container">
             <div class="section-title">
                 <h2 class="gold-text">Client Testimonials</h2>
-                <p class="section-subtitle">Trusted by security professionals worldwide</p>
+                <p class="section-subtitle">Trusted by security professionals and organizations</p>
             </div>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="rating">★★★★★</div>
                     <p class="testimonial-text">
-                        "AKATRON's OSINT investigation uncovered critical information that helped us prevent a major security breach. Their professionalism and attention to detail are unmatched."
+                        "AKATRON's OSINT capabilities are exceptional. Their detailed reports and actionable intelligence have been invaluable for our security operations."
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">RS</div>
                         <div class="author-info">
                             <h4>Rajesh Sharma</h4>
-                            <p>CISO, Tech Corp India</p>
+                            <p>CISO, Tech Corporation</p>
                         </div>
                     </div>
                 </div>
@@ -552,49 +533,7 @@
                 <div class="testimonial-card">
                     <div class="rating">★★★★★</div>
                     <p class="testimonial-text">
-                        "The threat intelligence reports from AKATRON have been instrumental in strengthening our security posture. Highly actionable and delivered with precision."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">PK</div>
-                        <div class="author-info">
-                            <h4>Priya Kapoor</h4>
-                            <p>Security Director, FinTech Solutions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Email risk analysis revealed our executives were compromised in multiple breaches. AKATRON's swift response and remediation guidance was invaluable."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AM</div>
-                        <div class="author-info">
-                            <h4>Amit Mehta</h4>
-                            <p>CEO, Digital Ventures</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Professional, ethical, and incredibly thorough. AKATRON delivered intelligence that exceeded our expectations and helped us make critical business decisions."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SK</div>
-                        <div class="author-info">
-                            <h4>Sneha Kumar</h4>
-                            <p>Risk Manager, Global Bank</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">
-                        "The dark web monitoring service has given us peace of mind. We now know immediately if our data appears in compromised databases."
+                        "Professional, thorough, and discreet. AKATRON delivered comprehensive threat intelligence that helped us prevent a major security incident."
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">VG</div>
@@ -707,7 +646,7 @@
                         </ul>
                     </div>
 
-                    <a href="#contact" class="btn" style="width: 100%; text-align: center; padding: 16px; background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%); color: #0a0e17; border: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; margin-top: 30px;">
+                    <a href="payment.html" class="btn" style="width: 100%; text-align: center; padding: 16px; background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%); color: #0a0e17; border: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; margin-top: 30px;">
                         Start Analysis →
                     </a>
                 </div>
@@ -759,8 +698,8 @@
                         </ul>
                     </div>
 
-                    <a href="#contact" class="btn" style="width: 100%; text-align: center; padding: 16px; background: linear-gradient(135deg, #f4e4a6 0%, #d4af37 100%); color: #0a0e17; border: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; margin-top: 30px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);">
-                        Request Background Check →
+                    <a href="payment.html" class="btn" style="width: 100%; text-align: center; padding: 16px; background: linear-gradient(135deg, #f4e4a6 0%, #d4af37 100%); color: #0a0e17; border: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; margin-top: 30px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);">
+                        Get Started →
                     </a>
                 </div>
 
@@ -811,7 +750,7 @@
                         </ul>
                     </div>
 
-                    <a href="#contact" class="btn" style="width: 100%; text-align: center; padding: 16px; background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%); color: #0a0e17; border: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; margin-top: 30px;">
+                    <a href="payment.html" class="btn" style="width: 100%; text-align: center; padding: 16px; background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%); color: #0a0e17; border: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; margin-top: 30px;">
                         Start Audit →
                     </a>
                 </div>
@@ -852,120 +791,102 @@
         </div>
     </section>
 
+    <!-- CTA SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Secure Your Digital Presence?</h2>
+                <p>Get started with professional cybersecurity services today</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                    <a href="payment.html" class="btn">Get Started Now</a>
+                    <a href="request-demo.html" class="btn btn-secondary">Request Free Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT SECTION -->
     <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
-                <h2 class="gold-text">Get Started Today</h2>
-                <p class="contact-intro">
-                    Ready to elevate your security posture? Contact our intelligence team for a confidential consultation.
-                </p>
+                <h2 class="gold-text">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your security needs</p>
             </div>
 
-            <form action="https://formspree.io/f/xbddrdqv" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                <select name="service" required>
-                    <option value="">Select Service</option>
-                    <option value="osint">OSINT Investigations</option>
-                    <option value="threat-intel">Threat Intelligence</option>
-                    <option value="email-risk">Email Risk Analysis</option>
-                    <option value="custom">Custom Intelligence Solution</option>
-                </select>
-                <textarea name="message" rows="5" placeholder="Describe your requirements" required></textarea>
-                <button type="submit">Submit Secure Request</button>
-            </form>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>arpitkatiayar261@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+91 91512 35481</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <div>
+                            <h4>Website</h4>
+                            <p>akatron-ai.github.io</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formspree.io/f/xdkoqpqy" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
+
     <!-- FOOTER -->
-    <footer class="site-footer">
-        <p><strong>AKATRON</strong> — Elite Cybersecurity & OSINT Intelligence</p>
-        
-        <!-- Social Media Links -->
-        <div style="margin: 20px 0;">
-            <a href="https://www.linkedin.com/in/arpit-katiyar-akatron" target="_blank" rel="noopener noreferrer" style="color: #DAA520; text-decoration: none; margin: 0 15px; font-size: 16px; transition: all 0.3s ease;">
-                <span style="display: inline-flex; align-items: center; gap: 8px;">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                </span>
-            </a>
-            <a href="https://twitter.com/AKATRON_Cyber" target="_blank" rel="noopener noreferrer" style="color: #DAA520; text-decoration: none; margin: 0 15px; font-size: 16px; transition: all 0.3s ease;">
-                <span style="display: inline-flex; align-items: center; gap: 8px;">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                    Twitter
-                </span>
-            </a>
-            <a href="https://github.com/akatron-ai" target="_blank" rel="noopener noreferrer" style="color: #DAA520; text-decoration: none; margin: 0 15px; font-size: 16px; transition: all 0.3s ease;">
-                <span style="display: inline-flex; align-items: center; gap: 8px;">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </span>
-            </a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AKATRON</h3>
+                <p>Elite Cybersecurity & OSINT Intelligence</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/arpit-katiyar-b5a1a0339/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="osint.html">OSINT Investigations</a>
+                <a href="threat-intelligence.html">Threat Intelligence</a>
+                <a href="email-risk.html">Email Risk Analysis</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blog.html">Blog</a>
+                <a href="request-demo.html">Request Demo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="mailto:arpitkatiayar261@gmail.com">Email Us</a>
+                <a href="https://wa.me/919151235481">WhatsApp</a>
+                <a href="payment.html">Payment Options</a>
+            </div>
         </div>
-        
-        <p>
-            <a href="privacy-policy.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
-            <a href="terms-of-service.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Terms of Service</a> | 
-            <a href="disclaimer.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Disclaimer</a> | 
-            <a href="blog.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Blog</a>
-        </p>
-        <p>Delivering confidential, ethical, and actionable intelligence.</p>
-        <p>© 2026 AKATRON. All rights reserved.</p>
-        <p class="disclaimer">
-            AKATRON provides cybersecurity intelligence and OSINT research for defensive, ethical, and lawful purposes only.
-        </p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AKATRON. All rights reserved.</p>
+        </div>
     </footer>
-
-    <!-- Tawk.to Live Chat Widget -->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/YOUR_TAWK_ID/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!-- End of Tawk.to Script -->
-
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add hover effect to clickable cards
-        document.querySelectorAll('.service-card[onclick]').forEach(card => {
-            card.style.cursor = 'pointer';
-        });
-    </script>
 </body>
 </html>
