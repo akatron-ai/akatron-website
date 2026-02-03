@@ -9,9 +9,6 @@
         gtag('config', 'G-Y80FZF6W7Y');
     </script>
     
-    <!-- Razorpay Checkout Script -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Email Breach Checker - AKATRON</title>
@@ -165,6 +162,7 @@
         .upgrade-btn:hover {
             background: #c99a1f;
             transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(218, 165, 32, 0.4);
         }
         
         .loading {
@@ -279,7 +277,12 @@
                         <li>✅ Security recommendations</li>
                         <li>✅ Instant alerts for new breaches</li>
                     </ul>
-                    <button onclick="purchaseFullReport()" class="upgrade-btn">Get Full Report - ₹499</button>
+                    <a href="https://razorpay.me/@akatronai" target="_blank" class="upgrade-btn" onclick="trackPurchaseClick()">
+                        Get Full Report - ₹499 →
+                    </a>
+                    <p style="color: #8a8f98; font-size: 14px; margin-top: 15px;">
+                        💳 Secure payment via Razorpay • Instant delivery
+                    </p>
                 </div>
             </div>
         </div>
@@ -334,10 +337,7 @@
         const LEAKCHECK_API_KEY = 'a37579091795e7ff808a10dba05bec9e28762d15';
         const LEAKCHECK_API_URL = 'https://leakcheck.io/api/public';
         
-        // Razorpay Configuration
-        const RAZORPAY_KEY_ID = 'rzp_live_SBd4EDY4jkyuOv';
-        
-        // Store current email for payment
+        // Store current email for tracking
         let currentEmail = '';
         
         async function checkEmail() {
@@ -487,72 +487,19 @@
             }, 5000);
         }
         
-        // Razorpay Payment Integration
-        function purchaseFullReport() {
-            if (!currentEmail) {
-                alert('Please check an email first before purchasing a report.');
-                return;
-            }
-            
-            const options = {
-                key: RAZORPAY_KEY_ID,
-                amount: 49900, // ₹499 in paise
-                currency: 'INR',
-                name: 'Akatron AI',
-                description: 'Email Risk Analysis - Full Report',
-                image: 'https://akatron-ai.github.io/akatron-website/akatron-logo.png',
-                prefill: {
-                    email: currentEmail
-                },
-                theme: {
-                    color: '#DAA520'
-                },
-                handler: function(response) {
-                    // Payment successful
-                    console.log('Payment successful:', response);
-                    
-                    // Track in Google Analytics
-                    gtag('event', 'purchase', {
-                        transaction_id: response.razorpay_payment_id,
-                        value: 499,
-                        currency: 'INR',
-                        items: [{
-                            item_name: 'Email Risk Analysis',
-                            price: 499,
-                            quantity: 1
-                        }]
-                    });
-                    
-                    // Show success message
-                    alert('✅ Payment Successful!\\n\\n' +
-                          'Payment ID: ' + response.razorpay_payment_id + '\\n' +
-                          'Amount: ₹499\\n\\n' +
-                          'Your detailed report will be sent to ' + currentEmail + ' within 5 minutes.');
-                    
-                    // TODO: Send payment details to backend for report generation
-                    // This will be implemented in next step
-                },
-                modal: {
-                    ondismiss: function() {
-                        console.log('Payment cancelled');
-                    }
-                }
-            };
-            
-            const rzp = new Razorpay(options);
-            
-            rzp.on('payment.failed', function(response) {
-                console.error('Payment failed:', response.error);
-                alert('❌ Payment Failed\\n\\n' + response.error.description);
-                
-                // Track failure
-                gtag('event', 'payment_failed', {
-                    error_code: response.error.code,
-                    error_description: response.error.description
-                });
+        // Track purchase button clicks
+        function trackPurchaseClick() {
+            gtag('event', 'begin_checkout', {
+                'event_category': 'ecommerce',
+                'event_label': 'email_risk_report',
+                'value': 499,
+                'currency': 'INR',
+                'items': [{
+                    'item_name': 'Email Risk Analysis',
+                    'price': 499,
+                    'quantity': 1
+                }]
             });
-            
-            rzp.open();
         }
         
         // Allow Enter key to submit
