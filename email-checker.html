@@ -9,6 +9,9 @@
         gtag('config', 'G-Y80FZF6W7Y');
     </script>
     
+    <!-- Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Email Breach Checker - AKATRON</title>
@@ -154,6 +157,9 @@
             font-weight: 700;
             margin-top: 15px;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
         
         .upgrade-btn:hover {
@@ -273,7 +279,7 @@
                         <li>✅ Security recommendations</li>
                         <li>✅ Instant alerts for new breaches</li>
                     </ul>
-                    <a href="email-risk.html" class="upgrade-btn">Get Full Report - ₹499</a>
+                    <button onclick="purchaseFullReport()" class="upgrade-btn">Get Full Report - ₹499</button>
                 </div>
             </div>
         </div>
@@ -328,6 +334,12 @@
         const LEAKCHECK_API_KEY = 'a37579091795e7ff808a10dba05bec9e28762d15';
         const LEAKCHECK_API_URL = 'https://leakcheck.io/api/public';
         
+        // Razorpay Configuration
+        const RAZORPAY_KEY_ID = 'rzp_live_SBd4EDY4jkyuOv';
+        
+        // Store current email for payment
+        let currentEmail = '';
+        
         async function checkEmail() {
             const email = document.getElementById('emailInput').value.trim();
             const resultBox = document.getElementById('resultBox');
@@ -340,6 +352,9 @@
                 showError('Please enter a valid email address');
                 return;
             }
+            
+            // Store email for later use
+            currentEmail = email;
             
             // Show loading
             loading.style.display = 'block';
@@ -470,6 +485,74 @@
             setTimeout(() => {
                 errorBox.style.display = 'none';
             }, 5000);
+        }
+        
+        // Razorpay Payment Integration
+        function purchaseFullReport() {
+            if (!currentEmail) {
+                alert('Please check an email first before purchasing a report.');
+                return;
+            }
+            
+            const options = {
+                key: RAZORPAY_KEY_ID,
+                amount: 49900, // ₹499 in paise
+                currency: 'INR',
+                name: 'Akatron AI',
+                description: 'Email Risk Analysis - Full Report',
+                image: 'https://akatron-ai.github.io/akatron-website/akatron-logo.png',
+                prefill: {
+                    email: currentEmail
+                },
+                theme: {
+                    color: '#DAA520'
+                },
+                handler: function(response) {
+                    // Payment successful
+                    console.log('Payment successful:', response);
+                    
+                    // Track in Google Analytics
+                    gtag('event', 'purchase', {
+                        transaction_id: response.razorpay_payment_id,
+                        value: 499,
+                        currency: 'INR',
+                        items: [{
+                            item_name: 'Email Risk Analysis',
+                            price: 499,
+                            quantity: 1
+                        }]
+                    });
+                    
+                    // Show success message
+                    alert('✅ Payment Successful!\\n\\n' +
+                          'Payment ID: ' + response.razorpay_payment_id + '\\n' +
+                          'Amount: ₹499\\n\\n' +
+                          'Your detailed report will be sent to ' + currentEmail + ' within 5 minutes.');
+                    
+                    // TODO: Send payment details to backend for report generation
+                    // This will be implemented in next step
+                },
+                modal: {
+                    ondismiss: function() {
+                        console.log('Payment cancelled');
+                    }
+                }
+            };
+            
+            const rzp = new Razorpay(options);
+            
+            rzp.on('payment.failed', function(response) {
+                console.error('Payment failed:', response.error);
+                alert('❌ Payment Failed\\n\\n' + response.error.description);
+                
+                // Track failure
+                gtag('event', 'payment_failed', {
+                    error_code: response.error.code,
+                    error_description: response.error.description
+                });
+            });
+            
+            rzp.open();
         }
         
         // Allow Enter key to submit
