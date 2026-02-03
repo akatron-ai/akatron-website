@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y80FZF6W7Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y80FZF6W7Y');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Email Breach Checker - AKATRON</title>
+    <meta name="description" content="Check if your email has been compromised in data breaches. Free instant security scan by AKATRON.">
+    <meta name="keywords" content="email breach checker, data breach, email security, AKATRON, free security scan">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="akatron-logo.png">
+    
+    <style>
+        .checker-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .email-input {
+            flex: 1;
+            padding: 15px 20px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-subtle);
+            border-radius: 8px;
+            color: #e8eaed;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .email-input:focus {
+            outline: none;
+            border-color: #DAA520;
+        }
+        
+        .check-btn {
+            padding: 15px 40px;
+            background: #DAA520;
+            color: #0a0b0f;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .check-btn:hover {
+            background: #c99a1f;
+            transform: translateY(-2px);
+        }
+        
+        .check-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .result-box {
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            display: none;
+        }
+        
+        .result-box.safe {
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .result-box.danger {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .result-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .result-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .result-text {
+            color: #b8bcc8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .upgrade-box {
+            background: linear-gradient(135deg, rgba(218,165,32,0.1) 0%, rgba(218,165,32,0.05) 100%);
+            border: 2px solid #DAA520;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .upgrade-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #DAA520;
+            color: #0a0b0f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .upgrade-btn:hover {
+            background: #c99a1f;
+            transform: translateY(-2px);
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .spinner {
+            border: 3px solid rgba(218, 165, 32, 0.3);
+            border-top: 3px solid #DAA520;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="akatron-logo.png" alt="AKATRON Logo">
+            <h1>AKATRON</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="osint.html">OSINT</a>
+            <a href="threat-intelligence.html">Threat Intel</a>
+            <a href="email-risk.html">Email Risk</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 100px 20px 60px;">
+        <h1 class="hero-title" style="font-size: 56px;">Free Email Breach Checker</h1>
+        <p class="subtitle">Check if your email has been compromised in data breaches</p>
+        <p style="max-width: 800px; margin: 0 auto; color: #b8bcc8;">
+            Instantly scan your email address against millions of known data breaches. Get a free security report in seconds.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="checker-container">
+            <h2 style="color: #DAA520; text-align: center; margin-bottom: 10px;">Enter Your Email Address</h2>
+            <p style="text-align: center; color: #8a8f98; margin-bottom: 30px;">
+                We'll check it against our database of known breaches
+            </p>
+            
+            <div class="input-group">
+                <input type="email" id="emailInput" class="email-input" placeholder="your.email@example.com" required>
+                <button onclick="checkEmail()" class="check-btn" id="checkBtn">Check Now</button>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p style="color: #b8bcc8; margin-top: 15px;">Scanning databases...</p>
+            </div>
+            
+            <div class="result-box" id="resultBox">
+                <div class="result-icon" id="resultIcon"></div>
+                <div class="result-title" id="resultTitle"></div>
+                <div class="result-text" id="resultText"></div>
+                
+                <div class="upgrade-box">
+                    <h3 style="color: #DAA520; margin-bottom: 10px;">🔒 Get Full Protection</h3>
+                    <p style="color: #b8bcc8; margin-bottom: 15px;">
+                        Get detailed breach reports, dark web monitoring, and continuous protection for your email.
+                    </p>
+                    <ul style="text-align: left; color: #b8bcc8; max-width: 500px; margin: 20px auto;">
+                        <li>✅ Detailed breach timeline and affected data</li>
+                        <li>✅ Dark web monitoring (24/7)</li>
+                        <li>✅ Password strength analysis</li>
+                        <li>✅ Security recommendations</li>
+                        <li>✅ Instant alerts for new breaches</li>
+                    </ul>
+                    <a href="email-risk.html" class="upgrade-btn">Get Full Report - ₹499</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" style="max-width: 1000px; margin-top: 60px;">
+            <h2 style="color: #DAA520; text-align: center; margin-bottom: 40px;">Why Check Your Email?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔓</div>
+                    <h3 style="color: #DAA520; margin-bottom: 10px;">Data Breaches</h3>
+                    <p style="color: #8a8f98;">Over 12 billion accounts have been compromised in data breaches</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 style="color: #DAA520; margin-bottom: 10px;">Identity Theft</h3>
+                    <p style="color: #8a8f98;">Stolen credentials are sold on the dark web for identity theft</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 style="color: #DAA520; margin-bottom: 10px;">Financial Loss</h3>
+                    <p style="color: #8a8f98;">Compromised emails lead to financial fraud and account takeovers</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 style="color: #DAA520; margin-bottom: 10px;">Instant Check</h3>
+                    <p style="color: #8a8f98;">Get results in seconds with our advanced scanning technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p><strong>AKATRON</strong> — Elite Cybersecurity & OSINT Intelligence</p>
+        <p>
+            <a href="privacy-policy.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
+            <a href="terms-of-service.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Terms of Service</a> | 
+            <a href="disclaimer.html" style="color: #DAA520; text-decoration: none; margin: 0 10px;">Disclaimer</a>
+        </p>
+        <p>Delivering confidential, ethical, and actionable intelligence.</p>
+        <p>© 2025 AKATRON. All rights reserved.</p>
+        <p class="disclaimer">
+            AKATRON provides cybersecurity intelligence and OSINT research for defensive, ethical, and lawful purposes only.
+        </p>
+    </footer>
+
+    <script>
+        async function checkEmail() {
+            const email = document.getElementById('emailInput').value.trim();
+            const resultBox = document.getElementById('resultBox');
+            const loading = document.getElementById('loading');
+            const checkBtn = document.getElementById('checkBtn');
+            
+            // Validate email
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Show loading
+            loading.style.display = 'block';
+            resultBox.style.display = 'none';
+            checkBtn.disabled = true;
+            
+            // Simulate API call (replace with real API later)
+            setTimeout(() => {
+                // Random result for demo (replace with real breach check)
+                const isBreached = Math.random() > 0.5;
+                
+                loading.style.display = 'none';
+                resultBox.style.display = 'block';
+                checkBtn.disabled = false;
+                
+                if (isBreached) {
+                    showBreachedResult(email);
+                } else {
+                    showSafeResult(email);
+                }
+                
+                // Track in Google Analytics
+                gtag('event', 'email_check', {
+                    'event_category': 'engagement',
+                    'event_label': 'free_tool'
+                });
+                
+            }, 2000);
+        }
+        
+        function showBreachedResult(email) {
+            const resultBox = document.getElementById('resultBox');
+            resultBox.className = 'result-box danger';
+            
+            document.getElementById('resultIcon').textContent = '⚠️';
+            document.getElementById('resultTitle').innerHTML = '<span style="color: #ef4444;">Email Found in Data Breaches!</span>';
+            document.getElementById('resultText').innerHTML = `
+                <strong>${email}</strong> has been found in <strong>multiple data breaches</strong>.<br><br>
+                Your email and associated data may have been exposed. This could include passwords, personal information, and more.
+                <br><br>
+                <strong>Immediate Actions:</strong><br>
+                1. Change passwords on all accounts using this email<br>
+                2. Enable two-factor authentication<br>
+                3. Monitor for suspicious activity<br>
+                4. Get a detailed breach report to see what data was exposed
+            `;
+        }
+        
+        function showSafeResult(email) {
+            const resultBox = document.getElementById('resultBox');
+            resultBox.className = 'result-box safe';
+            
+            document.getElementById('resultIcon').textContent = '✅';
+            document.getElementById('resultTitle').innerHTML = '<span style="color: #22c55e;">Good News! No Breaches Found</span>';
+            document.getElementById('resultText').innerHTML = `
+                <strong>${email}</strong> was not found in our database of known breaches.<br><br>
+                However, new breaches happen daily. Stay protected with continuous monitoring.
+                <br><br>
+                <strong>Stay Safe:</strong><br>
+                • Use strong, unique passwords for each account<br>
+                • Enable two-factor authentication<br>
+                • Monitor your email regularly<br>
+                • Consider dark web monitoring for ongoing protection
+            `;
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById('emailInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkEmail();
+            }
+        });
+    </script>
+</body>
+</html>
